@@ -19,12 +19,12 @@ To run locally:
 
 ## Deployment
 
-This repo is automatically deployed when code is merged to master. Deployment code is located in `.github/workflows/11ty-build.yml.`
+This repo is automatically deployed when code is merged to develop. Deployment code is located in `.github/workflows/11ty-build.yml.`
 
 
 ## Editing on GitHub.com
 
-1. Click on the **src** file [here](https://github.com/nhsconnect/nhsapp-developer-documentation/tree/master/src)
+1. Click on the **src** file [here](https://github.com/nhsconnect/nhsapp-developer-documentation/tree/develop/src)
 2. Find the file that you would like to edit and click into it
 3. Click the **"Edit" icon button** at the top right of the page
 4. When you are finished making your changes, click **Propose file change** at the bottom of the page
@@ -35,7 +35,7 @@ This repo is automatically deployed when code is merged to master. Deployment co
 
 ## Creating a new page on GitHub.com
 
-1. Click on the **src** file [here](https://github.com/nhsconnect/nhsapp-developer-documentation/tree/master/src)
+1. Click on the **src** file [here](https://github.com/nhsconnect/nhsapp-developer-documentation/tree/develop/src)
 2. Click the **"Create new file" button** at the top right of the page
 3. Give your file an appropriate name, making sure to end this name with **.md**
 4. When you are finished making your changes, click **Propose new file** at the bottom of the page

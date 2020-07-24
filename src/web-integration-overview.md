@@ -20,7 +20,7 @@ The NHS app will send a custom user agent with all requests so that the supplier
 
 ### Navigation from NHS App to supplier
 
-Navigation from the NHS App to web integration suppliers will be based on "Jump off points" located in set locations within logged in pages. NHS App configuration will decide whether or not individual jump off points for a given supplier are shown based on ODS code. The NHS App team will work directly with suppliers to map which jump off points will navigate for a given product.
+Navigation from the NHS App to web integration suppliers will be based on "Jump off points" located in set locations within logged in pages. SJR rules will decide whether or not individual jump off points for a given supplier are shown based on ODS code. The NHS App team will work directly with suppliers to map which jump off points will navigate for a given product.
 
 ## Process Flow
 

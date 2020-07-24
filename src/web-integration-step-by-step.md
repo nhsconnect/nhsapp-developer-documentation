@@ -106,5 +106,5 @@ Although, the NHS App iOS and Android apps act largely as web browsers - there a
 
 | Action             | Notes/Workarounds |
 |--------------------|-------------------|
-| File Download      | Currently file down is not possible in web integrations. The NHS App team are currently scoping out adding functionality to the NHS App JS Api to download a file.|
+| File Download      | Currently file download is not possible in web integrations. The NHS App team are currently scoping out adding functionality to the NHS App JS Api to download a file.|
 | Browser Print      | There is no plan to implement this in the NHS App as this functionality could confuse users as they are viewing the page in a native app.|

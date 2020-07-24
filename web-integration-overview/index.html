@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhsapp-developer-documentation/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhsapp-developer-documentation/images/favicon-192x192.png">
 
-<title>NHS App Developer Documentation</title>
+<title>Web Integration Overview</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -181,22 +181,30 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              NHS App Developer Documentation
+              Web Integration Overview
             </h1>
 
-            <p>The NHS App provides a simple and secure way for people to access a range of NHS services on their smartphone or tablet.</p>
-<p>By integrating with the NHS App, you can:</p>
+            <p>Web integration in the NHS App is made possible by the NHS App Android and iOS native applications hosting a tailored webview along side navigation. The webview acts as a limited web browser, allowing users to navigate through a third party suppliers webpage, as if it is part of the actual app.</p>
+<p>The aim of the web integration is to make the transition to and viewing off third party pages to be seamless for the user, therefore giving them an integrated experience. This allow the third party supplier to control the bulk of the user interface.</p>
+<p>Conformance requirements are detailed in <a href="https://digital.nhs.uk/binaries/content/assets/website-assets/services/nhs-app/suppliers/nhs-app-web-integration-specification-v1.1.pdf">the web integration specification document</a>.</p>
+<h2>Web View Handling Overview</h2>
+<p>The NHS app will send a custom user agent with all requests so that the supplier website knows it is being hosted within the NHS App browser. This will allow the supplier to:</p>
 <ul>
-<li>provide a better experience for your users</li>
-<li>grow your business</li>
-<li>benefit from association with the NHS</li>
+<li>Hide site headers and footers - the NHS App headers and footers will be shown instead</li>
+<li>Show any NHS App specific functionality/components</li>
+<li>Use the NHS App JS API to invoke custom actions</li>
 </ul>
-<p>Options and steps required for partners to integrate with the NHS App are detailed on the <a href="https://digital.nhs.uk/services/nhs-app/partners-and-developers">NHS App Partner website</a>.</p>
+<h3>Navigation from NHS App to supplier</h3>
+<p>Navigation from the NHS App to web integration suppliers will be based on &quot;Jump off points&quot; located in set locations within logged in pages. NHS App configuration will decide whether or not individual jump off points for a given supplier are shown based on ODS code. The NHS App team will work directly with suppliers to map which jump off points will navigate for a given product.</p>
+<h2>Process Flow</h2>
+ <a href="/nhsapp-developer-documentation/images/WebIntegrationProcessFlow.png">
+<img src="/nhsapp-developer-documentation/images/WebIntegrationProcessFlow.png" alt="Web Integration Process Flow" width="600"/>
+</a>
 
 
      <div class="app-edit-instructions">
               <hr />
-              <p>Edit <a href="https://github.com/nhsconnect/nhsapp-developer-documentation/blob/develop/./src/index.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhsapp-developer-documentation/blob/develop/./src/web-integration-overview.md">this page</a> on GitHub
               </p>
       </div>
 

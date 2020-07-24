@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhsapp-developer-documentation/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhsapp-developer-documentation/images/favicon-192x192.png">
 
-<title>NHS App Developer Documentation</title>
+<title>Javascript API Specification</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -181,22 +181,163 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              NHS App Developer Documentation
+              Javascript API Specification
             </h1>
 
-            <p>The NHS App provides a simple and secure way for people to access a range of NHS services on their smartphone or tablet.</p>
-<p>By integrating with the NHS App, you can:</p>
+            <p>Any application embedded within the NHS App as part of a web integration has access to a limited number of methods to interact with the native Android or iOS Applications using an exposed Javascript interface.</p>
+<p>To inline load the Javascript interface:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"&lt;env-url>/js/v1/nhsapp.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
+<p>Where <code>env-url</code> will be determined by the environment being used. Unless testing  un-released functionality, the NHS App production environment can be used <code>https://www.nhsapp.service.nhs.uk/</code>.</p>
+<p>Example Usage:</p>
+<pre class="language-javascript"><code class="language-javascript">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">goToHomepage</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h2>Reference</h2>
 <ul>
-<li>provide a better experience for your users</li>
-<li>grow your business</li>
-<li>benefit from association with the NHS</li>
+<li><a href="/nhsapp-developer-documentation/js-api-specification#tools">Tools</a>
+<ul>
+<li><a href="/nhsapp-developer-documentation/js-api-specification#isOpenInNHSApp">isOpenInNHSApp</a></li>
 </ul>
-<p>Options and steps required for partners to integrate with the NHS App are detailed on the <a href="https://digital.nhs.uk/services/nhs-app/partners-and-developers">NHS App Partner website</a>.</p>
+</li>
+<li><a href="/nhsapp-developer-documentation/js-api-specification#navigation">Navigation</a>
+<ul>
+<li><a href="/nhsapp-developer-documentation/js-api-specification#goToHomepage">goToHomepage</a></li>
+<li><a href="/nhsapp-developer-documentation/js-api-specification#goToPage">goToPage</a></li>
+</ul>
+</li>
+<li><a href="/nhsapp-developer-documentation/js-api-specification#storage">Storage</a>
+<ul>
+<li><a href="/nhsapp-developer-documentation/js-api-specification#addToCalendar">addToCalendar</a></li>
+</ul>
+</li>
+</ul>
+<h3>Tools <a name="tools"></a></h3>
+<h4>isOpenInNHSApp Function <a name="isOpenInNHSApp"></a></h4>
+<p><code>nhsapp.tools.isOpenInNHSApp()</code></p>
+<h5>Description</h5>
+<p>Returns true if the current page is open within the NHS App. Check is based on the current User Agent.</p>
+<h5>Status</h5>
+<p>Live</p>
+<hr>
+<h3>Navigation <a name="navigation"></a></h3>
+<h4>goToHomepage Function <a name="goToHomepage"></a></h4>
+<p><code>nhsapp.navigation.goToHomepage()</code></p>
+<h5>Description</h5>
+<p>Redirects the user to the NHS App homepage. This will exit the user’s current journey without any warning.</p>
+<h5>Status</h5>
+<p>Live</p>
+<hr>
+<h4>goToPage Function <a name="goToPage"></a></h4>
+<p><code>nhsapp.navigation.goToPage(appPage: string enum)</code></p>
+<h5>Description</h5>
+<p>Redirects the user to a page in the NHS App specified by the appPage string enumeration.</p>
+<h5>Parameters</h5>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>appPage</td>
+<td><strong>Type:</strong> nhsapp.navigation.AppPage <em>Required</em><br>The page to navigate to.</td>
+</tr>
+</tbody>
+</table>
+<h5>AppPage enumerations</h5>
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HOME_PAGE</td>
+<td>NHS App Home Page</td>
+</tr>
+<tr>
+<td>APPOINTMENTS</td>
+<td>Appointments Hub Page</td>
+</tr>
+<tr>
+<td>PRESCRIPTIONS</td>
+<td>Prescriptions Hub Page</td>
+</tr>
+<tr>
+<td>HEALTH_RECORDS</td>
+<td>Health Record Hub Page</td>
+</tr>
+<tr>
+<td>SYMPTOMS</td>
+<td>Symptoms Hub Page</td>
+</tr>
+<tr>
+<td>MESSAGES</td>
+<td>Messages Hub Page</td>
+</tr>
+</tbody>
+</table>
+<h5>Example Usage</h5>
+<pre><code>nhsapp.navigation.goToPage(nhsapp.navigation.AppPage.MESSAGES)
+</code></pre>
+<h5>Status</h5>
+<p>Live</p>
+<hr>
+<h3>Storage <a name="storage"></a></h3>
+<h4>addEventToCalendar Function <a name="addToCalendar"></a></h4>
+<pre class="language-javascript"><code class="language-javascript">nhsapp<span class="token punctuation">.</span>storage<span class="token punctuation">.</span><span class="token function">addEventToCalendar</span><span class="token punctuation">(</span><br>  subject<span class="token operator">:</span> string<span class="token punctuation">,</span><br>  body<span class="token operator">:</span> string<span class="token punctuation">,</span><br>  location<span class="token operator">:</span> string<span class="token punctuation">,</span><br>  startTimeEpochInSeconds<span class="token operator">:</span> integer<span class="token punctuation">,</span><br>  endTimeEpochInSeconds<span class="token operator">:</span> integer<span class="token punctuation">,</span><br><span class="token punctuation">)</span></code></pre>
+<h5>Description</h5>
+<p>Add an event to the calendar on the user's device. The NHS App's native controls will alert the user of any issues adding the event to their calendar.</p>
+<h4>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>subject</td>
+<td><strong>Type:</strong> string <em>Required</em><br>The Subject line for the calendar appointment.</td>
+</tr>
+<tr>
+<td>body</td>
+<td><strong>Type:</strong> string <em>Required</em><br>Plain text body for the appointment.</td>
+</tr>
+<tr>
+<td>location</td>
+<td><strong>Type:</strong> string <em>Required</em><br>Plain text location for the appointment.</td>
+</tr>
+<tr>
+<td>startTimeEpochInSeconds</td>
+<td><strong>Type:</strong> number <em>Required</em><br>Start datetime for the appointment, set as a Epoch timestamp.</td>
+</tr>
+<tr>
+<td>endTimeEpochInSeconds</td>
+<td><strong>Type:</strong> number <em>Optional</em><br>End datetime for the appointment, set as a Epoch timestamp. Must be greater or equal to <code>startTimeEpochInSeconds</code>.  Defaults to the same value as the start time (matching default behaviour of iOS and Android).</td>
+</tr>
+</tbody>
+</table>
+<h5>Example Usage</h5>
+<pre><code>nhsapp.storage.addEventToCalendar(
+	&quot;Hospital Appointment&quot;,
+	&quot;Please show up,
+	&quot;Dr Surgery, LS1&quot;,
+	1592211600,
+	1592215200
+)
+</code></pre>
+<h5>Status</h5>
+<p>Live</p>
+<hr>
 
 
      <div class="app-edit-instructions">
               <hr />
-              <p>Edit <a href="https://github.com/nhsconnect/nhsapp-developer-documentation/blob/develop/./src/index.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhsapp-developer-documentation/blob/develop/./src/js-api-specification.md">this page</a> on GitHub
               </p>
       </div>
 

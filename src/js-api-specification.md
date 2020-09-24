@@ -27,6 +27,7 @@ nhsapp.navigation.goToHomepage()
   * [goToPage](/nhsapp-developer-documentation/js-api-specification#goToPage)
 * [Storage](/nhsapp-developer-documentation/js-api-specification#storage)
   * [addToCalendar](/nhsapp-developer-documentation/js-api-specification#addToCalendar)
+  * [downloadFromBytes](/nhsapp-developer-documentation/js-api-specification#downloadFromBytes)
 
 ### Tools <a name="tools"></a>
 
@@ -131,7 +132,7 @@ Add an event to the calendar on the user's device. The NHS App's native controls
 ```
 nhsapp.storage.addEventToCalendar(
 	"Hospital Appointment",
-	"Please show up,
+	"Please show up",
 	"Dr Surgery, LS1",
 	1592211600,
 	1592215200
@@ -141,5 +142,44 @@ nhsapp.storage.addEventToCalendar(
 ##### Status
 
 Live
+
+---
+
+#### downloadFromBytes Function <a name="downloadFromBytes"></a>
+
+```	javascript
+nhsapp.downloadFromBytes(
+  base64data: string,
+  filename: string,
+  mimeType: string
+)
+```
+
+##### Description
+
+Download a file to the user's device. The NHS App's native controls will prompt the user to select a location.
+
+#### Parameters
+
+| Parameters              |                                                                                                                                                                |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| base64data                 | **Type:** string *Required*<br>A base64 string representation of the file.                                                                                                            |
+| filename                    | **Type:** string *Required*<br>The name to download the file, including extension. appointment.                                                                                                                      |
+| mimeType                | **Type:** string *Required*<br>The mime type of the file.                                                                                                                  |
+
+##### Example Usage
+
+```js
+var byteString = '....';
+nhsapp.storage.downloadFromBytes(
+  byteString,
+  'results.pdf',
+  'application/pdf'
+);
+```
+
+##### Status
+
+In draft - subject to change
 
 ---

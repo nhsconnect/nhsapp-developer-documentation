@@ -206,6 +206,7 @@
 <li><a href="/nhsapp-developer-documentation/js-api-specification#storage">Storage</a>
 <ul>
 <li><a href="/nhsapp-developer-documentation/js-api-specification#addToCalendar">addToCalendar</a></li>
+<li><a href="/nhsapp-developer-documentation/js-api-specification#downloadFromBytes">downloadFromBytes</a></li>
 </ul>
 </li>
 </ul>
@@ -324,7 +325,7 @@
 <h5>Example Usage</h5>
 <pre><code>nhsapp.storage.addEventToCalendar(
 	&quot;Hospital Appointment&quot;,
-	&quot;Please show up,
+	&quot;Please show up&quot;,
 	&quot;Dr Surgery, LS1&quot;,
 	1592211600,
 	1592215200
@@ -332,6 +333,38 @@
 </code></pre>
 <h5>Status</h5>
 <p>Live</p>
+<hr>
+<h4>downloadFromBytes Function <a name="downloadFromBytes"></a></h4>
+<pre class="language-javascript"><code class="language-javascript">nhsapp<span class="token punctuation">.</span><span class="token function">downloadFromBytes</span><span class="token punctuation">(</span><br>  base64data<span class="token operator">:</span> string<span class="token punctuation">,</span><br>  filename<span class="token operator">:</span> string<span class="token punctuation">,</span><br>  mimeType<span class="token operator">:</span> string<br><span class="token punctuation">)</span></code></pre>
+<h5>Description</h5>
+<p>Download a file to the user's device. The NHS App's native controls will prompt the user to select a location.</p>
+<h4>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>base64data</td>
+<td><strong>Type:</strong> string <em>Required</em><br>A base64 string representation of the file.</td>
+</tr>
+<tr>
+<td>filename</td>
+<td><strong>Type:</strong> string <em>Required</em><br>The name to download the file, including extension. appointment.</td>
+</tr>
+<tr>
+<td>mimeType</td>
+<td><strong>Type:</strong> string <em>Required</em><br>The mime type of the file.</td>
+</tr>
+</tbody>
+</table>
+<h5>Example Usage</h5>
+<pre class="language-js"><code class="language-js"><span class="token keyword">var</span> byteString <span class="token operator">=</span> <span class="token string">'....'</span><span class="token punctuation">;</span><br>nhsapp<span class="token punctuation">.</span>storage<span class="token punctuation">.</span><span class="token function">downloadFromBytes</span><span class="token punctuation">(</span><br>  byteString<span class="token punctuation">,</span><br>  <span class="token string">'results.pdf'</span><span class="token punctuation">,</span><br>  <span class="token string">'application/pdf'</span><br><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h5>Status</h5>
+<p>In draft - subject to change</p>
 <hr>
 
 

@@ -164,7 +164,7 @@ Download a file to the user's device. The NHS App's native controls will prompt 
 | Parameters              |                                                                                                                                                                |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | base64data                 | **Type:** string *Required*<br>A base64 string representation of the file.                                                                                                            |
-| filename                    | **Type:** string *Required*<br>The name to download the file, including extension. appointment.                                                                                                                      |
+| filename                    | **Type:** string *Required*<br>The name to download the file, including extension.                                                                                                                      |
 | mimeType                | **Type:** string *Required*<br>The mime type of the file.                                                                                                                  |
 
 ##### Example Usage

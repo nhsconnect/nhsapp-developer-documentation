@@ -83,7 +83,7 @@ Redirects the user to a page in the NHS App specified by the appPage string enum
 | APPOINTMENTS            | Appointments Hub Page                                                                                                           |
 | PRESCRIPTIONS           | Prescriptions Hub Page                                                                                                           |
 | HEALTH_RECORDS          | Health Record Hub Page                                                                                                           |
-| SYMPTOMS                | Symptoms Hub Page                                                                                                           |
+| ADVICE                  | Advice Hub Page                                                                                                             |
 | MESSAGES                | Messages Hub Page                                                                                                           |
 
 

@@ -85,6 +85,7 @@ Redirects the user to a page in the NHS App specified by the appPage string enum
 | HEALTH_RECORDS          | Health Record Hub Page                                                                                                           |
 | ADVICE                  | Advice Hub Page                                                                                                             |
 | MESSAGES                | Messages Hub Page                                                                                                           |
+| SETTINGS                | Settings Page                                                                                                           |
 
 
 ##### Example Usage

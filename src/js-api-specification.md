@@ -79,12 +79,13 @@ Redirects the user to a page in the NHS App specified by the appPage string enum
 
 | Values              |                                                                                                                                                                |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| HOME_PAGE               | NHS App Home Page                                                                                                           |
-| APPOINTMENTS            | Appointments Hub Page                                                                                                           |
-| PRESCRIPTIONS           | Prescriptions Hub Page                                                                                                           |
-| HEALTH_RECORDS          | Health Record Hub Page                                                                                                           |
 | ADVICE                  | Advice Hub Page                                                                                                             |
+| APPOINTMENTS            | Appointments Hub Page                                                                                                       |
+| CORONAVIRUS_SERVICES    | Coronavirus Services Hub Page                                                                                               |
+| HEALTH_RECORDS          | Health Record Hub Page                                                                                                      |
+| HOME_PAGE               | NHS App Home Page                                                                                                           |
 | MESSAGES                | Messages Hub Page                                                                                                           |
+| PRESCRIPTIONS           | Prescriptions Hub Page                                                                                                      |
 
 
 ##### Example Usage

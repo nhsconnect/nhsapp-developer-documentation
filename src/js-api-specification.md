@@ -80,11 +80,12 @@ Redirects the user to a page in the NHS App specified by the appPage string enum
 | Values              |                                                                                                                                                                |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | HOME_PAGE               | NHS App Home Page                                                                                                           |
-| APPOINTMENTS            | Appointments Hub Page                                                                                                           |
-| PRESCRIPTIONS           | Prescriptions Hub Page                                                                                                           |
-| HEALTH_RECORDS          | Health Record Hub Page                                                                                                           |
 | ADVICE                  | Advice Hub Page                                                                                                             |
+| APPOINTMENTS            | Appointments Hub Page                                                                                                       |
+| HEALTH_RECORDS          | Health Record Hub Page                                                                                                      |
 | MESSAGES                | Messages Hub Page                                                                                                           |
+| PRESCRIPTIONS           | Prescriptions Hub Page                                                                                                      |
+| UPLIFT                  | P9 Uplift Page                                                                                                              |
 
 
 ##### Example Usage

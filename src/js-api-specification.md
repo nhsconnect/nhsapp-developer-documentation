@@ -21,6 +21,7 @@ nhsapp.navigation.goToHomepage()
 
 ## Reference
 * [Tools](/nhsapp-developer-documentation/js-api-specification#tools)
+  * [getAppPlatform](/nhsapp-developer-documentation/js-api-specification#getAppPlatform)
   * [isOpenInNHSApp](/nhsapp-developer-documentation/js-api-specification#isOpenInNHSApp)
 * [Navigation](/nhsapp-developer-documentation/js-api-specification#navigation)
   * [goToHomepage](/nhsapp-developer-documentation/js-api-specification#goToHomepage)
@@ -30,6 +31,26 @@ nhsapp.navigation.goToHomepage()
   * [downloadFromBytes](/nhsapp-developer-documentation/js-api-specification#downloadFromBytes)
 
 ### Tools <a name="tools"></a>
+
+#### getAppPlatform Function <a name="getAppPlatform"></a>
+
+`nhsapp.tools.getAppPlatform()`
+
+##### Description
+
+Returns a string indicating the platform on which the current page is being displayed. Check is based on the current User Agent.
+
+The returned string will be one of the following:
+
+- "android" - indicates that the page is being displayed within the native Android NHS App.
+- "ios" - indicates that the page is being displayed within the native iOS NHS App.
+- "none" - indicates that the page is not being displayed within the native NHS App (i.e. it is probably being displayed in a web browser).
+
+##### Status
+
+Live
+
+---
 
 #### isOpenInNHSApp Function <a name="isOpenInNHSApp"></a>
 

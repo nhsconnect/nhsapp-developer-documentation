@@ -194,6 +194,7 @@
 <ul>
 <li><a href="/nhsapp-developer-documentation/js-api-specification#tools">Tools</a>
 <ul>
+<li><a href="/nhsapp-developer-documentation/js-api-specification#getAppPlatform">getAppPlatform</a></li>
 <li><a href="/nhsapp-developer-documentation/js-api-specification#isOpenInNHSApp">isOpenInNHSApp</a></li>
 </ul>
 </li>
@@ -211,6 +212,19 @@
 </li>
 </ul>
 <h3>Tools <a name="tools"></a></h3>
+<h4>getAppPlatform Function <a name="getAppPlatform"></a></h4>
+<p><code>nhsapp.tools.getAppPlatform()</code></p>
+<h5>Description</h5>
+<p>Returns a string indicating the platform on which the current page is being displayed. Check is based on the current User Agent.</p>
+<p>The returned string will be one of the following:</p>
+<ul>
+<li>&quot;android&quot; - indicates that the page is being displayed within the native Android NHS App.</li>
+<li>&quot;ios&quot; - indicates that the page is being displayed within the native iOS NHS App.</li>
+<li>&quot;none&quot; - indicates that the page is not being displayed within the native NHS App (i.e. it is probably being displayed in a web browser).</li>
+</ul>
+<h5>Status</h5>
+<p>Live</p>
+<hr>
 <h4>isOpenInNHSApp Function <a name="isOpenInNHSApp"></a></h4>
 <p><code>nhsapp.tools.isOpenInNHSApp()</code></p>
 <h5>Description</h5>

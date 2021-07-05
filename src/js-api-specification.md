@@ -181,6 +181,8 @@ nhsapp.downloadFromBytes(
 
 Download a file to the user's device. The NHS App's native controls will prompt the user to select a location.
 
+The mime type `application/vnd.apple.pkpass` is supported on the iOS platform and can be used to add a pass into the iOS wallet. The [getAppPlatform](/nhsapp-developer-documentation/js-api-specification#getAppPlatform) api can be used to determine the current application platform.
+
 #### Parameters
 
 | Parameters              |                                                                                                                                                                |

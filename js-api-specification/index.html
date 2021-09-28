@@ -185,7 +185,8 @@
             </h1>
 
             <p>Any application embedded within the NHS App as part of a web integration has access to a limited number of methods to interact with the native Android or iOS Applications using an exposed Javascript interface.</p>
-<p>To inline load the Javascript interface:</p>
+<p>The NHS App JS API must be loaded inline rather than being bundled into the client application codebase. This is so that any changes to the implementation of the API do not require client applications to be recompiled and redeployed.</p>
+<p>To include the Javascript interface:</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"&lt;env-url>/js/v1/nhsapp.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
 <p>Where <code>env-url</code> will be determined by the environment being used. Unless testing  un-released functionality, the NHS App production environment can be used <code>https://www.nhsapp.service.nhs.uk/</code>.</p>
 <p>Example Usage:</p>

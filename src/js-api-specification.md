@@ -5,7 +5,9 @@ title: Javascript API Specification
 
 Any application embedded within the NHS App as part of a web integration has access to a limited number of methods to interact with the native Android or iOS Applications using an exposed Javascript interface.
 
-To inline load the Javascript interface:
+The NHS App JS API must be loaded inline rather than being bundled into the client application codebase. This is so that any changes to the implementation of the API do not require client applications to be recompiled and redeployed.
+
+To include the Javascript interface:
 
 ```javascript
 <script type="text/javascript" src="<env-url>/js/v1/nhsapp.js"></script>

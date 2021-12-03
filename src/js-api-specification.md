@@ -28,6 +28,7 @@ nhsapp.navigation.goToHomepage()
 * [Navigation](/nhsapp-developer-documentation/js-api-specification#navigation)
   * [goToHomepage](/nhsapp-developer-documentation/js-api-specification#goToHomepage)
   * [goToPage](/nhsapp-developer-documentation/js-api-specification#goToPage)
+  * [openBrowserOverlay](/nhsapp-developer-documentation/js-api-specification#openBrowserOverlay)
 * [Storage](/nhsapp-developer-documentation/js-api-specification#storage)
   * [addToCalendar](/nhsapp-developer-documentation/js-api-specification#addToCalendar)
   * [downloadFromBytes](/nhsapp-developer-documentation/js-api-specification#downloadFromBytes)
@@ -115,6 +116,32 @@ Redirects the user to a page in the NHS App specified by the appPage string enum
 
 ```
 nhsapp.navigation.goToPage(nhsapp.navigation.AppPage.MESSAGES)
+```
+
+##### Status
+
+Live
+
+---
+
+#### openBrowserOverlay Function <a name="openBrowserOverlay"></a>
+
+`nhsapp.navigation.openBrowserOverlay(overlayUri: Uri)`
+
+##### Description
+
+Redirects the user to a specified page that will open in a browser overlay view.
+
+##### Parameters
+
+| Parameters              |                                                                                                                                                                |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| overlayUri                 | **Type:** Uri *Required*<br>The page to open in the browser overlay.                                                                                                     |
+
+##### Example Usage
+
+```
+nhsapp.navigation.openBrowserOverlay(https://www.nhs.uk/)
 ```
 
 ##### Status

@@ -203,6 +203,7 @@
 <ul>
 <li><a href="/nhsapp-developer-documentation/js-api-specification#goToHomepage">goToHomepage</a></li>
 <li><a href="/nhsapp-developer-documentation/js-api-specification#goToPage">goToPage</a></li>
+<li><a href="/nhsapp-developer-documentation/js-api-specification#openBrowserOverlay">openBrowserOverlay</a></li>
 </ul>
 </li>
 <li><a href="/nhsapp-developer-documentation/js-api-specification#storage">Storage</a>
@@ -301,6 +302,31 @@
 </table>
 <h5>Example Usage</h5>
 <pre><code>nhsapp.navigation.goToPage(nhsapp.navigation.AppPage.MESSAGES)
+</code></pre>
+<h5>Status</h5>
+<p>Live</p>
+<hr>
+<h4>openBrowserOverlay Function <a name="openBrowserOverlay"></a></h4>
+<p><code>nhsapp.navigation.openBrowserOverlay(overlayUri: Uri)</code></p>
+<h5>Description</h5>
+<p>Redirects the user to a specified page that will open in a browser overlay view.</p>
+<h5>Parameters</h5>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>overlayUri</td>
+<td><strong>Type:</strong> Uri <em>Required</em><br>The page to open in the browser overlay.</td>
+</tr>
+</tbody>
+</table>
+<h5>Example Usage</h5>
+<pre><code>nhsapp.navigation.openBrowserOverlay(&quot;https://www.nhs.uk/&quot;)
 </code></pre>
 <h5>Status</h5>
 <p>Live</p>

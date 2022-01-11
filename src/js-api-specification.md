@@ -141,7 +141,7 @@ Redirects the user to a specified page that will open in a browser overlay view.
 ##### Example Usage
 
 ```
-nhsapp.navigation.openBrowserOverlay(https://www.nhs.uk/)
+nhsapp.navigation.openBrowserOverlay('https://www.nhs.uk/')
 ```
 
 ##### Status

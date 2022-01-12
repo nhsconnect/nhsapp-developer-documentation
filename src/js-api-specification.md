@@ -114,7 +114,7 @@ Redirects the user to a page in the NHS App specified by the appPage string enum
 
 ##### Example Usage
 
-```
+```js
 nhsapp.navigation.goToPage(nhsapp.navigation.AppPage.MESSAGES)
 ```
 
@@ -140,7 +140,7 @@ Redirects the user to a specified page that will open in a browser overlay view.
 
 ##### Example Usage
 
-```
+```js
 nhsapp.navigation.openBrowserOverlay("https://www.nhs.uk/")
 ```
 
@@ -180,7 +180,7 @@ Add an event to the calendar on the user's device. The NHS App's native controls
 
 ##### Example Usage
 
-```
+```js
 nhsapp.storage.addEventToCalendar(
 	"Hospital Appointment",
 	"Please show up",

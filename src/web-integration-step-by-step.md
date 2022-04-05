@@ -27,7 +27,7 @@ We recommend using the [isOpenInNHSApp function in the NHS App JS API](/nhsapp-d
 
 Logged in users of the application will be passed to third party services using [NHS Login Single Sign On flow](https://nhsconnect.github.io/nhslogin/single-sign-on/). 
 
-Single Sign on will be achieved by passing the NHS App JWT token via a query parameter. The NHS App will allow a supplier to provide one or more url paths to be linked to from the jump 0ff points.
+Single Sign on will be achieved by passing the NHS App JWT token via a query parameter. The NHS App will allow a supplier to provide one or more url paths to be linked to from the jump off points.
 
 Suppliers will provide the following details to the NHS App prior to an integration:
 

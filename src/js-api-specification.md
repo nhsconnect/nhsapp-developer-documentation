@@ -26,6 +26,8 @@ nhsapp.navigation.goToHomepage()
   * [getAppPlatform](/nhsapp-developer-documentation/js-api-specification#getAppPlatform)
   * [isOpenInNHSApp](/nhsapp-developer-documentation/js-api-specification#isOpenInNHSApp)
 * [Navigation](/nhsapp-developer-documentation/js-api-specification#navigation)
+  * [setBackAction](/nhsapp-developer-documentation/js-api-specification#setBackAction)
+  * [clearBackAction](/nhsapp-developer-documentation/js-api-specification#clearBackAction)
   * [goToHomepage](/nhsapp-developer-documentation/js-api-specification#goToHomepage)
   * [goToPage](/nhsapp-developer-documentation/js-api-specification#goToPage)
   * [openBrowserOverlay](/nhsapp-developer-documentation/js-api-specification#openBrowserOverlay)
@@ -70,6 +72,52 @@ Live
 ---
 
 ### Navigation <a name="navigation"></a>
+
+#### setBackAction Function <a name="setBackAction"></a>
+
+`nhsapp.navigation.setBackAction(backAction: function)`
+
+##### Description
+
+Set the action that will be executed when a user presses the native back button on their device.
+
+##### Parameters
+
+| Parameters              |                                                                                                                                                                |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| backAction                 | **Type:** Function *Required*<br>The function to be excuted when the native back is pressed.            
+
+##### Example Usage
+
+```js
+let backAction = () => nhsapp.navigation.goToPage(nhsapp.navigation.AppPage.MESSAGES)
+nhsapp.navigation.setBackAction(backAction)
+```
+##### Status
+
+In Development
+
+---
+
+#### clearBackAction Function <a name="clearBackAction"></a>
+
+`nhsapp.navigation.clearBackAction()`
+
+##### Description
+
+Clear the action that will be executed when a user presses the native back button on their device.
+        
+
+##### Example Usage
+
+```js
+nhsapp.navigation.clearBackAction()
+```
+##### Status
+
+In Development
+
+---
 
 #### goToHomepage Function <a name="goToHomepage"></a>
 

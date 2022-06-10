@@ -201,6 +201,8 @@
 </li>
 <li><a href="/nhsapp-developer-documentation/js-api-specification#navigation">Navigation</a>
 <ul>
+<li><a href="/nhsapp-developer-documentation/js-api-specification#setBackAction">setBackAction</a></li>
+<li><a href="/nhsapp-developer-documentation/js-api-specification#clearBackAction">clearBackAction</a></li>
 <li><a href="/nhsapp-developer-documentation/js-api-specification#goToHomepage">goToHomepage</a></li>
 <li><a href="/nhsapp-developer-documentation/js-api-specification#goToPage">goToPage</a></li>
 <li><a href="/nhsapp-developer-documentation/js-api-specification#openBrowserOverlay">openBrowserOverlay</a></li>
@@ -235,6 +237,39 @@
 <p>Live</p>
 <hr>
 <h3>Navigation <a name="navigation"></a></h3>
+<h4>setBackAction Function <a name="setBackAction"></a></h4>
+<p><code>nhsapp.navigation.setBackAction(backAction: function)</code></p>
+<h5>Description</h5>
+<p>Set the action that will be executed when a user presses the native back button on their device.</p>
+<h5>Parameters</h5>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>backAction</td>
+<td><strong>Type:</strong> Function <em>Required</em><br>The function to be excuted when the native back is pressed.</td>
+</tr>
+</tbody>
+</table>
+<h5>Example Usage</h5>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> <span class="token function-variable function">backAction</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">goToPage</span><span class="token punctuation">(</span>nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span>AppPage<span class="token punctuation">.</span><span class="token constant">MESSAGES</span><span class="token punctuation">)</span><br>nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">setBackAction</span><span class="token punctuation">(</span>backAction<span class="token punctuation">)</span></code></pre>
+<h5>Status</h5>
+<p>In Development</p>
+<hr>
+<h4>clearBackAction Function <a name="clearBackAction"></a></h4>
+<p><code>nhsapp.navigation.clearBackAction()</code></p>
+<h5>Description</h5>
+<p>Clear the action that will be executed when a user presses the native back button on their device.</p>
+<h5>Example Usage</h5>
+<pre class="language-js"><code class="language-js">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">clearBackAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h5>Status</h5>
+<p>In Development</p>
+<hr>
 <h4>goToHomepage Function <a name="goToHomepage"></a></h4>
 <p><code>nhsapp.navigation.goToHomepage()</code></p>
 <h5>Description</h5>

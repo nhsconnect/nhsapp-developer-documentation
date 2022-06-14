@@ -216,8 +216,8 @@
 </tbody>
 </table>
 <p>We recommend using the <a href="/nhsapp-developer-documentation/js-api-specification/#isOpenInNHSApp">isOpenInNHSApp function in the NHS App JS API</a> to determine if the page is open in the NHS App which uses the user agent for detection.</p>
-<h2>NHS Login Single Sign On <a name="sso"></a></h2>
-<p>Logged in users of the application will be passed to third party services using <a href="https://nhsconnect.github.io/nhslogin/single-sign-on/">NHS Login Single Sign On flow</a>.</p>
+<h2>NHS login Single Sign On <a name="sso"></a></h2>
+<p>Logged in users of the application will be passed to third party services using <a href="https://nhsconnect.github.io/nhslogin/single-sign-on/">NHS login Single Sign On flow</a>.</p>
 <p>Single Sign on will be achieved by passing the NHS App JWT token via a query parameter. The NHS App will allow a supplier to provide one or more url paths to be linked to from the jump off points.</p>
 <p>Suppliers will provide the following details to the NHS App prior to an integration:</p>
 <ul>
@@ -228,11 +228,12 @@
 <p><code>&lt;baseurl&gt;/&lt;journey-path&gt;?assertedLoginIdentity=&lt;sso-jwt&gt;</code></p>
 <p>E.g. <code>https://supplier1.com/hospital-appointments?assertedLoginIdentity=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</code></p>
 <p>The <code>assertedLoginIdentity</code> query parameter will be added as the last parameter, so it is possible for the journey path to include query parameters.</p>
-<h3>NHS Login - Authorize call</h3>
-<p>The NHS requires suppliers to pass <code>prompt=none</code> to the NHS Login <code>/authorize</code> endpoint. This will ensure that user is shown an error page if there is an SSO issue.</p>
-<h3>NHS Login - Handle &quot;I do not want to use my NHS login&quot;</h3>
+<h3>NHS login - Authorize call</h3>
+<p>The NHS requires suppliers to pass <code>prompt=none</code> to the NHS login <code>/authorize</code> endpoint. This will ensure that user is shown an error page if there is an SSO issue.</p>
+<p>Note: the <a href="https://nhsconnect.github.io/nhslogin/single-sign-on/">NHS login SSO documentation</a> outlines the need for the Asserted Login Identity parameter to be passed in a different format than the <code>assertedLoginIdentity</code> query parameter (Camel case) supplied by the NHS App as outlined above. NHS login require this to be converted to Snake case: <code>asserted_login_identity</code>.</p>
+<h3>NHS login - Handle &quot;I do not want to use my NHS login&quot;</h3>
 <p>NHS login require suppliers to handle the return from this page where users are asked to agree to sharing their login details with the supplier.</p>
-<p>If the user selects &quot;I do not want to use my NHS login&quot;, NHS Login will return to the suppliers <code>auth-return</code> endpoint with <code>error=access_denied</code> and <code>error_description=ConsentNotGiven</code>.</p>
+<p>If the user selects &quot;I do not want to use my NHS login&quot;, NHS login will return to the suppliers <code>auth-return</code> endpoint with <code>error=access_denied</code> and <code>error_description=ConsentNotGiven</code>.</p>
 <p>The supplier should handle this and present a suitable message, with a link to the NHS App home page.</p>
 <h2>Site Links <a name="sitelinks"></a></h2>
 <p>It is possible to allow users to open links that suppliers send out (e.g. via email or sms) within the NHS App. This requires changes on both the NHS App and the supplier's application. Suppliers should work with the NHS App onboarding team to co-ordinate the changes.</p>

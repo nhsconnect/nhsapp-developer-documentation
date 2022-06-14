@@ -23,9 +23,9 @@ The NHS App will identify itself by adding a custom string in the format `nhsapp
 
 We recommend using the [isOpenInNHSApp function in the NHS App JS API](/nhsapp-developer-documentation/js-api-specification/#isOpenInNHSApp) to determine if the page is open in the NHS App which uses the user agent for detection.
 
-## NHS Login Single Sign On <a name="sso"></a>
+## NHS login Single Sign On <a name="sso"></a>
 
-Logged in users of the application will be passed to third party services using [NHS Login Single Sign On flow](https://nhsconnect.github.io/nhslogin/single-sign-on/). 
+Logged in users of the application will be passed to third party services using [NHS login Single Sign On flow](https://nhsconnect.github.io/nhslogin/single-sign-on/). 
 
 Single Sign on will be achieved by passing the NHS App JWT token via a query parameter. The NHS App will allow a supplier to provide one or more url paths to be linked to from the jump off points.
 
@@ -43,13 +43,15 @@ E.g. `https://supplier1.com/hospital-appointments?assertedLoginIdentity=eyJhbGci
 
 The `assertedLoginIdentity` query parameter will be added as the last parameter, so it is possible for the journey path to include query parameters.
 
-### NHS Login - Authorize call
-The NHS requires suppliers to pass `prompt=none` to the NHS Login `/authorize` endpoint. This will ensure that user is shown an error page if there is an SSO issue.
+### NHS login - Authorize call
+The NHS requires suppliers to pass `prompt=none` to the NHS login `/authorize` endpoint. This will ensure that user is shown an error page if there is an SSO issue.
 
-### NHS Login - Handle "I do not want to use my NHS login"
+Note: the [NHS login SSO documentation](https://nhsconnect.github.io/nhslogin/single-sign-on/) outlines the need for the Asserted Login Identity parameter to be passed in a different format than the `assertedLoginIdentity` query parameter (Camel case) supplied by the NHS App as outlined above. NHS login require this to be converted to Snake case: `asserted_login_identity`.
+
+### NHS login - Handle "I do not want to use my NHS login"
 NHS login require suppliers to handle the return from this page where users are asked to agree to sharing their login details with the supplier.
 
-If the user selects "I do not want to use my NHS login", NHS Login will return to the suppliers `auth-return` endpoint with `error=access_denied` and `error_description=ConsentNotGiven`.
+If the user selects "I do not want to use my NHS login", NHS login will return to the suppliers `auth-return` endpoint with `error=access_denied` and `error_description=ConsentNotGiven`.
 
 The supplier should handle this and present a suitable message, with a link to the NHS App home page.
 

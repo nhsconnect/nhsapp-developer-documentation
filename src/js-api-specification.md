@@ -31,6 +31,7 @@ nhsapp.navigation.goToHomepage()
   * [goToHomepage](/nhsapp-developer-documentation/js-api-specification#goToHomepage)
   * [goToPage](/nhsapp-developer-documentation/js-api-specification#goToPage)
   * [openBrowserOverlay](/nhsapp-developer-documentation/js-api-specification#openBrowserOverlay)
+  * [openExternalBrowser](/nhsapp-developer-documentation/js-api-specification#openExternalBrowser)
 * [Storage](/nhsapp-developer-documentation/js-api-specification#storage)
   * [addToCalendar](/nhsapp-developer-documentation/js-api-specification#addToCalendar)
   * [downloadFromBytes](/nhsapp-developer-documentation/js-api-specification#downloadFromBytes)
@@ -195,6 +196,32 @@ nhsapp.navigation.openBrowserOverlay("https://www.nhs.uk/")
 ##### Status
 
 Live
+
+---
+
+#### openExternalBrowser Function <a name="openExternalBrowser"></a>
+
+`nhsapp.navigation.openExternalBrowser(browserUri: Uri)`
+
+##### Description
+
+Redirects the user to a specified page that will open in the device's default browser application.
+
+##### Parameters
+
+| Parameters              |                                                                                                                                                                |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| browserUri              | **Type:** Uri *Required*<br>The page to open in the browser.                                                                                                     |
+
+##### Example Usage
+
+```js
+nhsapp.navigation.openExternalBrowser("https://www.nhs.uk/")
+```
+
+##### Status
+
+In Development
 
 ---
 

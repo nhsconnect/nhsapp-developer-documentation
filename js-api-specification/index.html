@@ -206,6 +206,7 @@
 <li><a href="/nhsapp-developer-documentation/js-api-specification#goToHomepage">goToHomepage</a></li>
 <li><a href="/nhsapp-developer-documentation/js-api-specification#goToPage">goToPage</a></li>
 <li><a href="/nhsapp-developer-documentation/js-api-specification#openBrowserOverlay">openBrowserOverlay</a></li>
+<li><a href="/nhsapp-developer-documentation/js-api-specification#openExternalBrowser">openExternalBrowser</a></li>
 </ul>
 </li>
 <li><a href="/nhsapp-developer-documentation/js-api-specification#storage">Storage</a>
@@ -363,6 +364,30 @@
 <pre class="language-js"><code class="language-js">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">openBrowserOverlay</span><span class="token punctuation">(</span><span class="token string">"https://www.nhs.uk/"</span><span class="token punctuation">)</span></code></pre>
 <h5>Status</h5>
 <p>Live</p>
+<hr>
+<h4>openExternalBrowser Function <a name="openExternalBrowser"></a></h4>
+<p><code>nhsapp.navigation.openExternalBrowser(browserUri: Uri)</code></p>
+<h5>Description</h5>
+<p>Redirects the user to a specified page that will open in the device's default browser application.</p>
+<h5>Parameters</h5>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>browserUri</td>
+<td><strong>Type:</strong> Uri <em>Required</em><br>The page to open in the browser.</td>
+</tr>
+</tbody>
+</table>
+<h5>Example Usage</h5>
+<pre class="language-js"><code class="language-js">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">openExternalBrowser</span><span class="token punctuation">(</span><span class="token string">"https://www.nhs.uk/"</span><span class="token punctuation">)</span></code></pre>
+<h5>Status</h5>
+<p>In Development</p>
 <hr>
 <h3>Storage <a name="storage"></a></h3>
 <h4>addEventToCalendar Function <a name="addToCalendar"></a></h4>

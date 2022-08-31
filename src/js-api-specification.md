@@ -80,7 +80,7 @@ Live
 
 ##### Description
 
-Set the action that will be executed when a user presses the native back button on their device.
+Set the action that will be executed when a user executes the native back functionality on their device such as pressing the back button on Android or swiping back on iOS.
 
 ##### Parameters
 
@@ -106,7 +106,7 @@ In Development
 
 ##### Description
 
-Clear the action that will be executed when a user presses the native back button on their device.
+Clear the action that will be executed when a user executes the native back functionality on their device such as pressing the back button on Android or swiping back on iOS.
         
 
 ##### Example Usage

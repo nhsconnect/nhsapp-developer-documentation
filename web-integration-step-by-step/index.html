@@ -185,13 +185,13 @@
             </h1>
 
             <ul>
-<li><a href="/nhsapp-developer-documentation/web-integration-step-by-step#headersandfooters">Hiding Headers and Footers</a></li>
+<li><a href="/nhsapp-developer-documentation/web-integration-step-by-step#hideheaders">Hiding Headers</a></li>
 <li><a href="/nhsapp-developer-documentation/web-integration-step-by-step/#sso">Single Sign On</a></li>
 <li><a href="/nhsapp-developer-documentation/web-integration-step-by-step/#sitelinks">Site Links</a></li>
 <li><a href="/nhsapp-developer-documentation/web-integration-step-by-step/#limitations">Limitations</a></li>
 </ul>
-<h2>Hiding Headers and Footers <a name="headersandfooters"></a></h2>
-<p>In order to fit in with the styling of the NHS App - suppliers are required to hide headers and footer - which will be superseded by the NHS App native headers and footers.</p>
+<h2>Hiding Headers<a name="hideheaders"></a></h2>
+<p>In order to fit in with the styling of the NHS App - suppliers are required to hide the header of their service - which will be superseded by the NHS App native header.</p>
 <p>The NHS App will identify itself by adding a custom string in the format <code>nhsapp-android/&lt;nhsapp-version&gt;</code> or <code>nhsapp-ios/&lt;nhsapp-version&gt;</code> to the end of the user agent header when making requests (where nhsapp-version is the current version of the native NHS App, e.g. 1.29.0).</p>
 <h3>Examples</h3>
 <table>
@@ -229,8 +229,8 @@
 <p>E.g. <code>https://supplier1.com/hospital-appointments?assertedLoginIdentity=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</code></p>
 <p>The <code>assertedLoginIdentity</code> query parameter will be added as the last parameter, so it is possible for the journey path to include query parameters.</p>
 <h3>NHS login - Authorize call</h3>
-<p>The NHS requires suppliers to pass <code>prompt=none</code> to the NHS login <code>/authorize</code> endpoint. This will ensure that user is shown an error page if there is an SSO issue.</p>
-<p>Note: the <a href="https://nhsconnect.github.io/nhslogin/single-sign-on/">NHS login SSO documentation</a> outlines the need for the Asserted Login Identity parameter to be passed in a different format than the <code>assertedLoginIdentity</code> query parameter (Camel case) supplied by the NHS App as outlined above. NHS login require this to be converted to Snake case: <code>asserted_login_identity</code>.</p>
+<p>The NHS requires suppliers to pass <code>prompt=none</code> to the NHS login <code>/authorize</code> endpoint. This will ensure that the user is shown an error page if there is an SSO issue. Suppliers must be able to display a suitable error to the user if an OIDC error code is returned from NHS login. In most circumstances, this error screen should prompt the user to return back to the NHS App to re-authenticate.</p>
+<p><strong>Note:</strong> the <a href="https://nhsconnect.github.io/nhslogin/single-sign-on/">NHS login SSO documentation</a> outlines the need for the Asserted Login Identity parameter to be passed in a different format than the <code>assertedLoginIdentity</code> query parameter (Camel case) supplied by the NHS App as outlined above. NHS login require this to be converted to Snake case: <code>asserted_login_identity</code>.</p>
 <h3>NHS login - Handle &quot;I do not want to use my NHS login&quot;</h3>
 <p>NHS login require suppliers to handle the return from this page where users are asked to agree to sharing their login details with the supplier.</p>
 <p>If the user selects &quot;I do not want to use my NHS login&quot;, NHS login will return to the suppliers <code>auth-return</code> endpoint with <code>error=access_denied</code> and <code>error_description=ConsentNotGiven</code>.</p>
@@ -257,7 +257,7 @@
 <tbody>
 <tr>
 <td>File Download</td>
-<td>Currently file download is not possible in web integrations. The NHS App team are currently scoping out adding functionality to the NHS App JS Api to <a href="/nhsapp-developer-documentation/js-api-specification#downloadFromBytes">download a file</a>.</td>
+<td>Conventional file download does not work in web integrations due to webview limitations. However, there is a function in the NHS App JS Api to allow users to <a href="/nhsapp-developer-documentation/js-api-specification#downloadFromBytes">download a file from bytes</a>.</td>
 </tr>
 <tr>
 <td>Browser Print</td>

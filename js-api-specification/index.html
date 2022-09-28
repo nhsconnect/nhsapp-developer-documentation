@@ -188,7 +188,7 @@
 <p>The NHS App JS API must be loaded inline rather than being bundled into the client application codebase. This is so that any changes to the implementation of the API do not require client applications to be recompiled and redeployed.</p>
 <p>To include the Javascript interface:</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"&lt;env-url>/js/v1/nhsapp.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
-<p>Where <code>env-url</code> will be determined by the environment being used. Unless testing  un-released functionality, the NHS App production environment can be used <code>https://www.nhsapp.service.nhs.uk/</code>.</p>
+<p>Where <code>env-url</code> will be determined by the environment being used. Unless testing un-released functionality, the NHS App production environment can be used <code>https://www.nhsapp.service.nhs.uk/</code>.</p>
 <p>Example Usage:</p>
 <pre class="language-javascript"><code class="language-javascript">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">goToHomepage</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <h2>Reference</h2>
@@ -260,7 +260,7 @@
 <h5>Example Usage</h5>
 <pre class="language-js"><code class="language-js"><span class="token keyword">let</span> <span class="token function-variable function">backAction</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">goToPage</span><span class="token punctuation">(</span>nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span>AppPage<span class="token punctuation">.</span><span class="token constant">MESSAGES</span><span class="token punctuation">)</span><br>nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">setBackAction</span><span class="token punctuation">(</span>backAction<span class="token punctuation">)</span></code></pre>
 <h5>Status</h5>
-<p>In Development</p>
+<p>Live</p>
 <hr>
 <h4>clearBackAction Function <a name="clearBackAction"></a></h4>
 <p><code>nhsapp.navigation.clearBackAction()</code></p>
@@ -269,7 +269,7 @@
 <h5>Example Usage</h5>
 <pre class="language-js"><code class="language-js">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">clearBackAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <h5>Status</h5>
-<p>In Development</p>
+<p>Live</p>
 <hr>
 <h4>goToHomepage Function <a name="goToHomepage"></a></h4>
 <p><code>nhsapp.navigation.goToHomepage()</code></p>
@@ -387,7 +387,7 @@
 <h5>Example Usage</h5>
 <pre class="language-js"><code class="language-js">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">openExternalBrowser</span><span class="token punctuation">(</span><span class="token string">"https://www.nhs.uk/"</span><span class="token punctuation">)</span></code></pre>
 <h5>Status</h5>
-<p>In Development</p>
+<p>Live</p>
 <hr>
 <h3>Storage <a name="storage"></a></h3>
 <h4>addEventToCalendar Function <a name="addToCalendar"></a></h4>

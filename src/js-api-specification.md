@@ -13,7 +13,7 @@ To include the Javascript interface:
 <script type="text/javascript" src="<env-url>/js/v1/nhsapp.js"></script>
 ```
 
-Where `env-url` will be determined by the environment being used. Unless testing  un-released functionality, the NHS App production environment can be used `https://www.nhsapp.service.nhs.uk/`.
+Where `env-url` will be determined by the environment being used. Unless testing un-released functionality, the NHS App production environment can be used `https://www.nhsapp.service.nhs.uk/`.
 
 Example Usage:
 
@@ -96,7 +96,7 @@ nhsapp.navigation.setBackAction(backAction)
 ```
 ##### Status
 
-In Development
+Live
 
 ---
 
@@ -116,7 +116,7 @@ nhsapp.navigation.clearBackAction()
 ```
 ##### Status
 
-In Development
+Live
 
 ---
 
@@ -221,7 +221,7 @@ nhsapp.navigation.openExternalBrowser("https://www.nhs.uk/")
 
 ##### Status
 
-In Development
+Live
 
 ---
 

@@ -3,14 +3,14 @@ layout: base.njk
 title: Web Integration Step by Step
 ---
 
-* [Hiding Headers and Footers](/nhsapp-developer-documentation/web-integration-step-by-step#headersandfooters)
+* [Hiding Headers](/nhsapp-developer-documentation/web-integration-step-by-step#hideheaders)
 * [Single Sign On](/nhsapp-developer-documentation/web-integration-step-by-step/#sso)
 * [Site Links](/nhsapp-developer-documentation/web-integration-step-by-step/#sitelinks)
 * [Limitations](/nhsapp-developer-documentation/web-integration-step-by-step/#limitations)
 
-## Hiding Headers and Footers <a name="headersandfooters"></a>
+## Hiding Headers<a name="hideheaders"></a>
 
-In order to fit in with the styling of the NHS App - suppliers are required to hide headers and footer - which will be superseded by the NHS App native headers and footers.
+In order to fit in with the styling of the NHS App - suppliers are required to hide the header of their service - which will be superseded by the NHS App native header.
 
 The NHS App will identify itself by adding a custom string in the format `nhsapp-android/<nhsapp-version>` or `nhsapp-ios/<nhsapp-version>` to the end of the user agent header when making requests (where nhsapp-version is the current version of the native NHS App, e.g. 1.29.0).
 
@@ -44,9 +44,9 @@ E.g. `https://supplier1.com/hospital-appointments?assertedLoginIdentity=eyJhbGci
 The `assertedLoginIdentity` query parameter will be added as the last parameter, so it is possible for the journey path to include query parameters.
 
 ### NHS login - Authorize call
-The NHS requires suppliers to pass `prompt=none` to the NHS login `/authorize` endpoint. This will ensure that user is shown an error page if there is an SSO issue.
+The NHS requires suppliers to pass `prompt=none` to the NHS login `/authorize` endpoint. This will ensure that the user is shown an error page if there is an SSO issue. Suppliers must be able to display a suitable error to the user if an OIDC error code is returned from NHS login. In most circumstances, this error screen should prompt the user to return back to the NHS App to re-authenticate.
 
-Note: the [NHS login SSO documentation](https://nhsconnect.github.io/nhslogin/single-sign-on/) outlines the need for the Asserted Login Identity parameter to be passed in a different format than the `assertedLoginIdentity` query parameter (Camel case) supplied by the NHS App as outlined above. NHS login require this to be converted to Snake case: `asserted_login_identity`.
+**Note:** the [NHS login SSO documentation](https://nhsconnect.github.io/nhslogin/single-sign-on/) outlines the need for the Asserted Login Identity parameter to be passed in a different format than the `assertedLoginIdentity` query parameter (Camel case) supplied by the NHS App as outlined above. NHS login require this to be converted to Snake case: `asserted_login_identity`.
 
 ### NHS login - Handle "I do not want to use my NHS login"
 NHS login require suppliers to handle the return from this page where users are asked to agree to sharing their login details with the supplier.
@@ -108,5 +108,5 @@ Although, the NHS App iOS and Android apps act largely as web browsers - there a
 
 | Action             | Notes/Workarounds |
 |--------------------|-------------------|
-| File Download      | Currently file download is not possible in web integrations. The NHS App team are currently scoping out adding functionality to the NHS App JS Api to [download a file](/nhsapp-developer-documentation/js-api-specification#downloadFromBytes).|
+| File Download      | Conventional file download does not work in web integrations due to webview limitations. However, there is a function in the NHS App JS Api to allow users to [download a file from bytes](/nhsapp-developer-documentation/js-api-specification#downloadFromBytes).|
 | Browser Print      | There is no plan to implement this in the NHS App as this functionality could confuse users as they are viewing the page in a native app.|

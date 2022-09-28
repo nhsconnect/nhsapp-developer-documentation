@@ -13,7 +13,7 @@ Conformance requirements are detailed in [the web integration specification docu
 
 The NHS app will send a custom user agent with all requests so that the supplier website knows it is being hosted within the NHS App browser. This will allow the supplier to:
 
-* Hide site headers and footers - the NHS App headers and footers will be shown instead
+* Hide site headers - the NHS App header and footer will be shown instead
 * Show any NHS App specific functionality/components
 * Use the NHS App JS API to invoke custom actions
 

@@ -150,15 +150,16 @@ Redirects the user to a page in the NHS App specified by the appPage string enum
 
 ##### AppPage enumerations
 
-| Values              |                                                                                                                                                                |
-|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| HOME_PAGE               | NHS App Home Page                                                                                                           |
-| ADVICE                  | Advice Hub Page                                                                                                             |
-| APPOINTMENTS            | Appointments Hub Page                                                                                                       |
-| HEALTH_RECORDS          | Health Record Hub Page                                                                                                      |
-| MESSAGES                | Messages Hub Page                                                                                                           |
-| PRESCRIPTIONS           | Prescriptions Hub Page                                                                                                      |
-| UPLIFT                  | P9 Uplift Page                                                                                                              |
+| Values         |                                                                                 |
+|----------------|---------------------------------------------------------------------------------|
+| HOME_PAGE      | NHS App Home Page                                                               |
+| ADVICE         | Advice Hub Page                                                                 |
+| APPOINTMENTS   | Appointments Hub Page                                                           |
+| HEALTH_RECORDS | Health Record Hub Page                                                          |
+| MESSAGES       | Messages Hub Page                                                               |
+| PRESCRIPTIONS  | Prescriptions Hub Page                                                          |
+| UPLIFT         | P9 Uplift Page                                                                  |
+| GO_BACK        | Go back to last page the user visited in the NHS App before the web integration |
 
 
 ##### Example Usage

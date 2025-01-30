@@ -3,10 +3,10 @@ layout: base.njk
 title: Web Integration Step by Step
 ---
 
-* [Hiding Headers](/nhsapp-developer-documentation/web-integration-step-by-step#hideheaders)
-* [Single Sign On](/nhsapp-developer-documentation/web-integration-step-by-step/#sso)
-* [Site Links](/nhsapp-developer-documentation/web-integration-step-by-step/#sitelinks)
-* [Limitations](/nhsapp-developer-documentation/web-integration-step-by-step/#limitations)
+* [Hiding Headers](/web-integration-step-by-step/#hideheaders)
+* [Single Sign On](/web-integration-step-by-step/#sso)
+* [Site Links](/web-integration-step-by-step/#sitelinks)
+* [Limitations](/web-integration-step-by-step/#limitations)
 
 ## Hiding Headers<a name="hideheaders"></a>
 
@@ -21,7 +21,7 @@ The NHS App will identify itself by adding a custom string in the format `nhsapp
 | Pixel 2 | 1.26.2      | Mozilla/5.0 (Linux; Android 10; Pixel 2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.116 Mobile Safari/537.36 nhsapp-android/1.26.2 |
 | Phone   | 1.25.0      | Mozilla/5.0 (iPhone; CPU iPhone OS 6_1_2 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Mobile/10B146 nhsapp-ios/1.25.0                  |
 
-We recommend using the [isOpenInNHSApp function in the NHS App JS API](/nhsapp-developer-documentation/js-api-specification/#isOpenInNHSApp) to determine if the page is open in the NHS App which uses the user agent for detection.
+We recommend using the [isOpenInNHSApp function in the NHS App JS API](/js-api-specification/#isOpenInNHSApp) to determine if the page is open in the NHS App which uses the user agent for detection.
 
 ## NHS login Single Sign On <a name="sso"></a>
 
@@ -104,9 +104,9 @@ where app-id will vary per NHS App environment and will be provided by the NHS A
 
 ## Limitations <a name="limitations"></a>
 
-Although, the NHS App iOS and Android apps act largely as web browsers - there are some web functions that are not available. In some cases these will be addressed by the [NHS App JS API](/nhsapp-developer-documentation/js-api-specification).
+Although, the NHS App iOS and Android apps act largely as web browsers - there are some web functions that are not available. In some cases these will be addressed by the [NHS App JS API](/js-api-specification).
 
 | Action             | Notes/Workarounds |
 |--------------------|-------------------|
-| File Download      | Conventional file download does not work in web integrations due to webview limitations. However, there is a function in the NHS App JS Api to allow users to [download a file from bytes](/nhsapp-developer-documentation/js-api-specification#downloadFromBytes).|
+| File Download      | Conventional file download does not work in web integrations due to webview limitations. However, there is a function in the NHS App JS Api to allow users to [download a file from bytes](/js-api-specification/#downloadFromBytes).|
 | Browser Print      | There is no plan to implement this in the NHS App as this functionality could confuse users as they are viewing the page in a native app.|

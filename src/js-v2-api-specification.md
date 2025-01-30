@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Javascript API Specification
+title: Javascript API v2 Specification
 ---
 
 Any application embedded within the NHS App as part of a web integration has access to a limited number of methods to interact with the native Android or iOS Applications using an exposed Javascript interface.
@@ -22,19 +22,19 @@ nhsapp.navigation.goToHomepage()
 ```
 
 ## Reference
-* [Tools](/nhsapp-developer-documentation/js-api-specification#tools)
-  * [getAppPlatform](/nhsapp-developer-documentation/js-api-specification#getAppPlatform)
-  * [isOpenInNHSApp](/nhsapp-developer-documentation/js-api-specification#isOpenInNHSApp)
-* [Navigation](/nhsapp-developer-documentation/js-api-specification#navigation)
-  * [setBackAction](/nhsapp-developer-documentation/js-api-specification#setBackAction)
-  * [clearBackAction](/nhsapp-developer-documentation/js-api-specification#clearBackAction)
-  * [goToHomepage](/nhsapp-developer-documentation/js-api-specification#goToHomepage)
-  * [goToPage](/nhsapp-developer-documentation/js-api-specification#goToPage)
-  * [openBrowserOverlay](/nhsapp-developer-documentation/js-api-specification#openBrowserOverlay)
-  * [openExternalBrowser](/nhsapp-developer-documentation/js-api-specification#openExternalBrowser)
-* [Storage](/nhsapp-developer-documentation/js-api-specification#storage)
-  * [addToCalendar](/nhsapp-developer-documentation/js-api-specification#addToCalendar)
-  * [downloadFromBytes](/nhsapp-developer-documentation/js-api-specification#downloadFromBytes)
+* [Tools](/js-v2-api-specification/#tools)
+  * [getAppPlatform](/js-v2-api-specification/#getAppPlatform)
+  * [isOpenInNHSApp](/js-v2-api-specification/#isOpenInNHSApp)
+* [Navigation](/js-v2-api-specification/#navigation)
+  * [setBackAction](/js-v2-api-specification/#setBackAction)
+  * [clearBackAction](/js-v2-api-specification/#clearBackAction)
+  * [goToHomepage](/js-v2-api-specification/#goToHomepage)
+  * [goToPage](/js-v2-api-specification/#goToPage)
+  * [openBrowserOverlay](/js-v2-api-specification/#openBrowserOverlay)
+  * [openExternalBrowser](/js-v2-api-specification/#openExternalBrowser)
+* [Storage](/js-v2-api-specification/#storage)
+  * [addToCalendar](/js-v2-api-specification/#addToCalendar)
+  * [downloadFromBytes](/js-v2-api-specification/#downloadFromBytes)
 
 ### Tools <a name="tools"></a>
 
@@ -281,7 +281,7 @@ nhsapp.downloadFromBytes(
 
 Download a file to the user's device. The NHS App's native controls will prompt the user to select a location.
 
-The mime type `application/vnd.apple.pkpass` is supported on the iOS platform and can be used to add a pass into the iOS wallet. The [getAppPlatform](/nhsapp-developer-documentation/js-api-specification#getAppPlatform) api can be used to determine the current application platform.
+The mime type `application/vnd.apple.pkpass` is supported on the iOS platform and can be used to add a pass into the iOS wallet. The [getAppPlatform](/js-v2-api-specification/#getAppPlatform) api can be used to determine the current application platform.
 
 #### Parameters
 

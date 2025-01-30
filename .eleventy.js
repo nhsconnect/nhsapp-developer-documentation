@@ -1,5 +1,4 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import UpgradeHelper from "@11ty/eleventy-upgrade-help";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
 export default async function(config) {
@@ -13,7 +12,6 @@ export default async function(config) {
   config.addPassthroughCopy("./src/css");
   config.addPassthroughCopy("./src/js");
   
-  config.addPlugin(UpgradeHelper);
   return {
     dir: {
       input: "src/",

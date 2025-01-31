@@ -14,7 +14,7 @@
     <link rel="mask-icon" href="/nhsapp-developer-documentation/images/favicon.svg" color="#005eb8">
     <link rel="icon" sizes="192x192" href="/nhsapp-developer-documentation/images/favicon-192x192.png">
 
-    <title>Javascript API Specification</title>
+    <title>Javascript API v2 Specification</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -179,38 +179,38 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              Javascript API Specification
+              Javascript API v2 Specification
             </h1>
 
             <p>Any application embedded within the NHS App as part of a web integration has access to a limited number of methods to interact with the native Android or iOS Applications using an exposed Javascript interface.</p>
 <p>The NHS App JS API must be loaded inline rather than being bundled into the client application codebase. This is so that any changes to the implementation of the API do not require client applications to be recompiled and redeployed.</p>
 <p>To include the Javascript interface:</p>
-<pre class="language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"&lt;env-url>/js/v1/nhsapp.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"&lt;env-url>/js/v2/nhsapp.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
 <p>Where <code>env-url</code> will be determined by the environment being used. Unless testing un-released functionality, the NHS App production environment can be used <code>https://www.nhsapp.service.nhs.uk/</code>.</p>
 <p>Example Usage:</p>
 <pre class="language-javascript"><code class="language-javascript">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">goToHomepage</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <h2>Reference</h2>
 <ul>
-<li><a href="/nhsapp-developer-documentation/js-api-specification/#tools">Tools</a>
+<li><a href="/nhsapp-developer-documentation/js-v2-api-specification/#tools">Tools</a>
 <ul>
-<li><a href="/nhsapp-developer-documentation/js-api-specification/#getAppPlatform">getAppPlatform</a></li>
-<li><a href="/nhsapp-developer-documentation/js-api-specification/#isOpenInNHSApp">isOpenInNHSApp</a></li>
+<li><a href="/nhsapp-developer-documentation/js-v2-api-specification/#getAppPlatform">getAppPlatform</a></li>
+<li><a href="/nhsapp-developer-documentation/js-v2-api-specification/#isOpenInNHSApp">isOpenInNHSApp</a></li>
 </ul>
 </li>
-<li><a href="/nhsapp-developer-documentation/js-api-specification/#navigation">Navigation</a>
+<li><a href="/nhsapp-developer-documentation/js-v2-api-specification/#navigation">Navigation</a>
 <ul>
-<li><a href="/nhsapp-developer-documentation/js-api-specification/#setBackAction">setBackAction</a></li>
-<li><a href="/nhsapp-developer-documentation/js-api-specification/#clearBackAction">clearBackAction</a></li>
-<li><a href="/nhsapp-developer-documentation/js-api-specification/#goToHomepage">goToHomepage</a></li>
-<li><a href="/nhsapp-developer-documentation/js-api-specification/#goToPage">goToPage</a></li>
-<li><a href="/nhsapp-developer-documentation/js-api-specification/#openBrowserOverlay">openBrowserOverlay</a></li>
-<li><a href="/nhsapp-developer-documentation/js-api-specification/#openExternalBrowser">openExternalBrowser</a></li>
+<li><a href="/nhsapp-developer-documentation/js-v2-api-specification/#setBackAction">setBackAction</a></li>
+<li><a href="/nhsapp-developer-documentation/js-v2-api-specification/#clearBackAction">clearBackAction</a></li>
+<li><a href="/nhsapp-developer-documentation/js-v2-api-specification/#goToHomepage">goToHomepage</a></li>
+<li><a href="/nhsapp-developer-documentation/js-v2-api-specification/#goToPage">goToPage</a></li>
+<li><a href="/nhsapp-developer-documentation/js-v2-api-specification/#openBrowserOverlay">openBrowserOverlay</a></li>
+<li><a href="/nhsapp-developer-documentation/js-v2-api-specification/#openExternalBrowser">openExternalBrowser</a></li>
 </ul>
 </li>
-<li><a href="/nhsapp-developer-documentation/js-api-specification/#storage">Storage</a>
+<li><a href="/nhsapp-developer-documentation/js-v2-api-specification/#storage">Storage</a>
 <ul>
-<li><a href="/nhsapp-developer-documentation/js-api-specification/#addToCalendar">addToCalendar</a></li>
-<li><a href="/nhsapp-developer-documentation/js-api-specification/#downloadFromBytes">downloadFromBytes</a></li>
+<li><a href="/nhsapp-developer-documentation/js-v2-api-specification/#addToCalendar">addToCalendar</a></li>
+<li><a href="/nhsapp-developer-documentation/js-v2-api-specification/#downloadFromBytes">downloadFromBytes</a></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +256,7 @@
 </tbody>
 </table>
 <h5>Example Usage</h5>
-<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> <span class="token function-variable function">backAction</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">goToPage</span><span class="token punctuation">(</span>nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span>AppPage<span class="token punctuation">.</span><span class="token constant">MESSAGES</span><span class="token punctuation">)</span><br>nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">setBackAction</span><span class="token punctuation">(</span>backAction<span class="token punctuation">)</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> <span class="token function-variable function">backAction</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">goToPage</span><span class="token punctuation">(</span>nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span>AppPage<span class="token punctuation">.</span><span class="token constant">MESSAGES</span><span class="token punctuation">)</span><br>nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">setBackAction</span><span class="token punctuation">(</span>backAction<span class="token punctuation">)</span></code></pre>
 <h5>Status</h5>
 <p>Live</p>
 <hr>
@@ -265,7 +265,7 @@
 <h5>Description</h5>
 <p>Clear the action that will be executed when a user executes the native back functionality on their device such as pressing the back button on Android or swiping back on iOS.</p>
 <h5>Example Usage</h5>
-<pre class="language-js"><code class="language-js">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">clearBackAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">clearBackAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <h5>Status</h5>
 <p>Live</p>
 <hr>
@@ -309,24 +309,16 @@
 <td>NHS App Home Page</td>
 </tr>
 <tr>
-<td>ADVICE</td>
-<td>Advice Hub Page</td>
+<td>SERVICES</td>
+<td>Services Hub Page</td>
 </tr>
 <tr>
-<td>APPOINTMENTS</td>
-<td>Appointments Hub Page</td>
-</tr>
-<tr>
-<td>HEALTH_RECORDS</td>
-<td>Health Record Hub Page</td>
+<td>YOUR_HEALTH</td>
+<td>Your Health Hub Page</td>
 </tr>
 <tr>
 <td>MESSAGES</td>
 <td>Messages Hub Page</td>
-</tr>
-<tr>
-<td>PRESCRIPTIONS</td>
-<td>Prescriptions Hub Page</td>
 </tr>
 <tr>
 <td>UPLIFT</td>
@@ -339,7 +331,7 @@
 </tbody>
 </table>
 <h5>Example Usage</h5>
-<pre class="language-js"><code class="language-js">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">goToPage</span><span class="token punctuation">(</span>nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span>AppPage<span class="token punctuation">.</span><span class="token constant">MESSAGES</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">goToPage</span><span class="token punctuation">(</span>nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span>AppPage<span class="token punctuation">.</span><span class="token constant">MESSAGES</span><span class="token punctuation">)</span></code></pre>
 <h5>Status</h5>
 <p>Live</p>
 <hr>
@@ -363,7 +355,7 @@
 </tbody>
 </table>
 <h5>Example Usage</h5>
-<pre class="language-js"><code class="language-js">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">openBrowserOverlay</span><span class="token punctuation">(</span><span class="token string">"https://www.nhs.uk/"</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">openBrowserOverlay</span><span class="token punctuation">(</span><span class="token string">"https://www.nhs.uk/"</span><span class="token punctuation">)</span></code></pre>
 <h5>Status</h5>
 <p>Live</p>
 <hr>
@@ -387,7 +379,7 @@
 </tbody>
 </table>
 <h5>Example Usage</h5>
-<pre class="language-js"><code class="language-js">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">openExternalBrowser</span><span class="token punctuation">(</span><span class="token string">"https://www.nhs.uk/"</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">openExternalBrowser</span><span class="token punctuation">(</span><span class="token string">"https://www.nhs.uk/"</span><span class="token punctuation">)</span></code></pre>
 <h5>Status</h5>
 <p>Live</p>
 <hr>
@@ -428,7 +420,7 @@
 </tbody>
 </table>
 <h5>Example Usage</h5>
-<pre class="language-js"><code class="language-js">nhsapp<span class="token punctuation">.</span>storage<span class="token punctuation">.</span><span class="token function">addEventToCalendar</span><span class="token punctuation">(</span><br>	<span class="token string">"Hospital Appointment"</span><span class="token punctuation">,</span><br>	<span class="token string">"Please show up"</span><span class="token punctuation">,</span><br>	<span class="token string">"Dr Surgery, LS1"</span><span class="token punctuation">,</span><br>	<span class="token number">1592211600</span><span class="token punctuation">,</span><br>	<span class="token number">1592215200</span><br><span class="token punctuation">)</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript">nhsapp<span class="token punctuation">.</span>storage<span class="token punctuation">.</span><span class="token function">addEventToCalendar</span><span class="token punctuation">(</span><br>	<span class="token string">"Hospital Appointment"</span><span class="token punctuation">,</span><br>	<span class="token string">"Please show up"</span><span class="token punctuation">,</span><br>	<span class="token string">"Dr Surgery, LS1"</span><span class="token punctuation">,</span><br>	<span class="token number">1592211600</span><span class="token punctuation">,</span><br>	<span class="token number">1592215200</span><br><span class="token punctuation">)</span></code></pre>
 <h5>Status</h5>
 <p>Live</p>
 <hr>
@@ -436,7 +428,7 @@
 <pre class="language-javascript"><code class="language-javascript">nhsapp<span class="token punctuation">.</span><span class="token function">downloadFromBytes</span><span class="token punctuation">(</span><br>  <span class="token literal-property property">base64data</span><span class="token operator">:</span> string<span class="token punctuation">,</span><br>  <span class="token literal-property property">filename</span><span class="token operator">:</span> string<span class="token punctuation">,</span><br>  <span class="token literal-property property">mimeType</span><span class="token operator">:</span> string<br><span class="token punctuation">)</span></code></pre>
 <h5>Description</h5>
 <p>Download a file to the user's device. The NHS App's native controls will prompt the user to select a location.</p>
-<p>The mime type <code>application/vnd.apple.pkpass</code> is supported on the iOS platform and can be used to add a pass into the iOS wallet. The <a href="/nhsapp-developer-documentation/js-api-specification/#getAppPlatform">getAppPlatform</a> api can be used to determine the current application platform.</p>
+<p>The mime type <code>application/vnd.apple.pkpass</code> is supported on the iOS platform and can be used to add a pass into the iOS wallet. The <a href="/nhsapp-developer-documentation/js-v2-api-specification/#getAppPlatform">getAppPlatform</a> api can be used to determine the current application platform.</p>
 <h4>Parameters</h4>
 <table>
 <thead>
@@ -461,7 +453,7 @@
 </tbody>
 </table>
 <h5>Example Usage</h5>
-<pre class="language-js"><code class="language-js"><span class="token keyword">var</span> byteString <span class="token operator">=</span> <span class="token string">'....'</span><span class="token punctuation">;</span><br>nhsapp<span class="token punctuation">.</span>storage<span class="token punctuation">.</span><span class="token function">downloadFromBytes</span><span class="token punctuation">(</span><br>  byteString<span class="token punctuation">,</span><br>  <span class="token string">'results.pdf'</span><span class="token punctuation">,</span><br>  <span class="token string">'application/pdf'</span><br><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> byteString <span class="token operator">=</span> <span class="token string">'....'</span><span class="token punctuation">;</span><br>nhsapp<span class="token punctuation">.</span>storage<span class="token punctuation">.</span><span class="token function">downloadFromBytes</span><span class="token punctuation">(</span><br>  byteString<span class="token punctuation">,</span><br>  <span class="token string">'results.pdf'</span><span class="token punctuation">,</span><br>  <span class="token string">'application/pdf'</span><br><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h5>Status</h5>
 <p>Live</p>
 <hr>
@@ -469,7 +461,7 @@
 
      <div class="app-edit-instructions">
               <hr>
-              <p>Edit <a href="https://github.com/nhsconnect/nhsapp-developer-documentation/blob/develop/./src/js-api-specification.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhsapp-developer-documentation/blob/develop/./src/js-v2-api-specification.md">this page</a> on GitHub
               </p>
       </div>
 

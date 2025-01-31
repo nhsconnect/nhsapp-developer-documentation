@@ -24,6 +24,6 @@ Navigation from the NHS App to web integration suppliers will be based on "Jump 
 
 ## Process Flow
 
- <a href="/nhsapp-developer-documentation/images/WebIntegrationProcessFlow.png">
-<img src="/nhsapp-developer-documentation/images/WebIntegrationProcessFlow.png" alt="Web Integration Process Flow" width="600"/>
+ <a href="/images/WebIntegrationProcessFlow.png">
+<img src="/images/WebIntegrationProcessFlow.png" alt="Web Integration Process Flow" width="600"/>
 </a>

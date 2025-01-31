@@ -1,5 +1,6 @@
 {
   "name": "nhsapp-developer-docs",
+  "type": "module",
   "version": "1.0.0",
   "description": "docs for partners",
   "main": ".eleventy.js",
@@ -13,7 +14,7 @@
   "author": "NHS Digital",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1"
   }
 }

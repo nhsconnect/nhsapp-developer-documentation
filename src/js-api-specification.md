@@ -22,19 +22,19 @@ nhsapp.navigation.goToHomepage()
 ```
 
 ## Reference
-* [Tools](/nhsapp-developer-documentation/js-api-specification#tools)
-  * [getAppPlatform](/nhsapp-developer-documentation/js-api-specification#getAppPlatform)
-  * [isOpenInNHSApp](/nhsapp-developer-documentation/js-api-specification#isOpenInNHSApp)
-* [Navigation](/nhsapp-developer-documentation/js-api-specification#navigation)
-  * [setBackAction](/nhsapp-developer-documentation/js-api-specification#setBackAction)
-  * [clearBackAction](/nhsapp-developer-documentation/js-api-specification#clearBackAction)
-  * [goToHomepage](/nhsapp-developer-documentation/js-api-specification#goToHomepage)
-  * [goToPage](/nhsapp-developer-documentation/js-api-specification#goToPage)
-  * [openBrowserOverlay](/nhsapp-developer-documentation/js-api-specification#openBrowserOverlay)
-  * [openExternalBrowser](/nhsapp-developer-documentation/js-api-specification#openExternalBrowser)
-* [Storage](/nhsapp-developer-documentation/js-api-specification#storage)
-  * [addToCalendar](/nhsapp-developer-documentation/js-api-specification#addToCalendar)
-  * [downloadFromBytes](/nhsapp-developer-documentation/js-api-specification#downloadFromBytes)
+* [Tools](/js-api-specification/#tools)
+  * [getAppPlatform](/js-api-specification/#getAppPlatform)
+  * [isOpenInNHSApp](/js-api-specification/#isOpenInNHSApp)
+* [Navigation](/js-api-specification/#navigation)
+  * [setBackAction](/js-api-specification/#setBackAction)
+  * [clearBackAction](/js-api-specification/#clearBackAction)
+  * [goToHomepage](/js-api-specification/#goToHomepage)
+  * [goToPage](/js-api-specification/#goToPage)
+  * [openBrowserOverlay](/js-api-specification/#openBrowserOverlay)
+  * [openExternalBrowser](/js-api-specification/#openExternalBrowser)
+* [Storage](/js-api-specification/#storage)
+  * [addToCalendar](/js-api-specification/#addToCalendar)
+  * [downloadFromBytes](/js-api-specification/#downloadFromBytes)
 
 ### Tools <a name="tools"></a>
 
@@ -150,15 +150,16 @@ Redirects the user to a page in the NHS App specified by the appPage string enum
 
 ##### AppPage enumerations
 
-| Values              |                                                                                                                                                                |
-|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| HOME_PAGE               | NHS App Home Page                                                                                                           |
-| ADVICE                  | Advice Hub Page                                                                                                             |
-| APPOINTMENTS            | Appointments Hub Page                                                                                                       |
-| HEALTH_RECORDS          | Health Record Hub Page                                                                                                      |
-| MESSAGES                | Messages Hub Page                                                                                                           |
-| PRESCRIPTIONS           | Prescriptions Hub Page                                                                                                      |
-| UPLIFT                  | P9 Uplift Page                                                                                                              |
+| Values         |                                                                                 |
+|----------------|---------------------------------------------------------------------------------|
+| HOME_PAGE      | NHS App Home Page                                                               |
+| ADVICE         | Advice Hub Page                                                                 |
+| APPOINTMENTS   | Appointments Hub Page                                                           |
+| HEALTH_RECORDS | Health Record Hub Page                                                          |
+| MESSAGES       | Messages Hub Page                                                               |
+| PRESCRIPTIONS  | Prescriptions Hub Page                                                          |
+| UPLIFT         | P9 Uplift Page                                                                  |
+| GO_BACK        | Go back to last page the user visited in the NHS App before the web integration |
 
 
 ##### Example Usage
@@ -285,7 +286,7 @@ nhsapp.downloadFromBytes(
 
 Download a file to the user's device. The NHS App's native controls will prompt the user to select a location.
 
-The mime type `application/vnd.apple.pkpass` is supported on the iOS platform and can be used to add a pass into the iOS wallet. The [getAppPlatform](/nhsapp-developer-documentation/js-api-specification#getAppPlatform) api can be used to determine the current application platform.
+The mime type `application/vnd.apple.pkpass` is supported on the iOS platform and can be used to add a pass into the iOS wallet. The [getAppPlatform](/js-api-specification/#getAppPlatform) api can be used to determine the current application platform.
 
 #### Parameters
 

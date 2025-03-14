@@ -18,7 +18,7 @@ Where `env-url` will be determined by the environment being used. Unless testing
 Example Usage:
 
 ``` javascript
-nhsapp.navigation.goToHomepage()
+nhsapp.navigation.goToHomePage()
 ```
 
 ## Reference
@@ -28,7 +28,7 @@ nhsapp.navigation.goToHomepage()
 * [Navigation](/js-v2-api-specification/#navigation)
   * [setBackAction](/js-v2-api-specification/#setBackAction)
   * [clearBackAction](/js-v2-api-specification/#clearBackAction)
-  * [goToHomepage](/js-v2-api-specification/#goToHomepage)
+  * [goToHomePage](/js-v2-api-specification/#goToHomePage)
   * [goToPage](/js-v2-api-specification/#goToPage)
   * [openBrowserOverlay](/js-v2-api-specification/#openBrowserOverlay)
   * [openExternalBrowser](/js-v2-api-specification/#openExternalBrowser)
@@ -120,9 +120,9 @@ Live
 
 ---
 
-#### goToHomepage Function <a name="goToHomepage"></a>
+#### goToHomePage Function <a name="goToHomePage"></a>
 
-`nhsapp.navigation.goToHomepage()`
+`nhsapp.navigation.goToHomePage()`
 
 ##### Description
 

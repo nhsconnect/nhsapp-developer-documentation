@@ -214,6 +214,10 @@
 </tbody>
 </table>
 <p>We recommend using the <a href="/nhsapp-developer-documentation/js-api-specification/#isOpenInNHSApp">isOpenInNHSApp function in the NHS App JS API</a> to determine if the page is open in the NHS App which uses the user agent for detection.</p>
+<h2>Guidance for recognising traffic from NHS App</h2>
+<p>Our recommended approach for identifying NHS App traffic against non-NHS App traffic is through using URL query parameters.</p>
+<p>To assist with identifying NHS App traffic, we recommended suppliers add ?from=nhsApp query parameter in their application. Using this query parameter within the application will allow suppliers to setup the correct styling on the application (based on this query parameter being set or not). This can also be implemented across other pages like e.g. unexpected errors, invalid sessions.</p>
+<p>This is not the required solution for suppliers, this is guidance. Suppliers should determine the best solution for their product to meet the requirements of NHS App integration.</p>
 <h2>NHS login Single Sign On <a name="sso"></a></h2>
 <p>Logged in users of the application will be passed to third party services using <a href="https://nhsconnect.github.io/nhslogin/single-sign-on/">NHS login Single Sign On flow</a>.</p>
 <p>Single Sign on will be achieved by passing the NHS App JWT token via a query parameter. The NHS App will allow a supplier to provide one or more url paths to be linked to from the jump off points.</p>

@@ -23,6 +23,14 @@ The NHS App will identify itself by adding a custom string in the format `nhsapp
 
 We recommend using the [isOpenInNHSApp function in the NHS App JS API](/js-api-specification/#isOpenInNHSApp) to determine if the page is open in the NHS App which uses the user agent for detection.
 
+## Guidance for recognising traffic from NHS App
+
+Our recommended approach for identifying NHS App traffic against non-NHS App traffic is through using URL query parameters.
+
+To assist with identifying NHS App traffic, we recommended suppliers add ?from=nhsApp query parameter in their application. Using this query parameter within the application will allow suppliers to setup the correct styling on the application (based on this query parameter being set or not). This can also be implemented across other pages like e.g. unexpected errors, invalid sessions.
+
+This is not the required solution for suppliers, this is guidance. Suppliers should determine the best solution for their product to meet the requirements of NHS App integration.
+
 ## NHS login Single Sign On <a name="sso"></a>
 
 Logged in users of the application will be passed to third party services using [NHS login Single Sign On flow](https://nhsconnect.github.io/nhslogin/single-sign-on/). 

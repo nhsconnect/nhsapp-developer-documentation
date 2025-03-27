@@ -4,6 +4,7 @@ title: Web Integration Step by Step
 ---
 
 * [Hiding Headers](/web-integration-step-by-step/#hideheaders)
+* [Recognising Traffic](/web-integration-step-by-step/#recognisingtraffic)
 * [Single Sign On](/web-integration-step-by-step/#sso)
 * [Site Links](/web-integration-step-by-step/#sitelinks)
 * [Limitations](/web-integration-step-by-step/#limitations)
@@ -21,13 +22,13 @@ The NHS App will identify itself by adding a custom string in the format `nhsapp
 | Pixel 2 | 1.26.2      | Mozilla/5.0 (Linux; Android 10; Pixel 2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.116 Mobile Safari/537.36 nhsapp-android/1.26.2 |
 | Phone   | 1.25.0      | Mozilla/5.0 (iPhone; CPU iPhone OS 6_1_2 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Mobile/10B146 nhsapp-ios/1.25.0                  |
 
-We recommend using the [isOpenInNHSApp function in the NHS App JS API](/js-api-specification/#isOpenInNHSApp) to determine if the page is open in the NHS App which uses the user agent for detection.
+We recommend using the [`isOpenInNHSApp` function in the NHS App JS API](/js-api-specification/#isOpenInNHSApp) to determine if the page is open in the NHS App which uses the user agent for detection.
 
-## Guidance for recognising traffic from NHS App
+## Guidance for recognising traffic from NHS App<a name="recognisingtraffic"></a>
 
-Our recommended approach for identifying NHS App traffic against non-NHS App traffic is through using URL query parameters.
+Our recommended approach for identifying NHS App traffic against non-NHS App traffic is through using URL query parameters. This guidance is applicable for web journeys (where there is no custom user agent available), particularly if using the same URLs for both NHS App and non-NHS App traffic.
 
-To assist with identifying NHS App traffic, we recommended suppliers add ?from=nhsApp query parameter in their application. Using this query parameter within the application will allow suppliers to setup the correct styling on the application (based on this query parameter being set or not). This can also be implemented across other pages like e.g. unexpected errors, invalid sessions.
+To assist with identifying NHS App traffic, we recommended suppliers add a `?from=nhsApp` query parameter in their application. Using this query parameter within the application will allow suppliers to setup the correct styling on the application (based on this query parameter being set or not). This can also be implemented across other pages like unexpected errors, invalid sessions, etc.
 
 This is not the required solution for suppliers, this is guidance. Suppliers should determine the best solution for their product to meet the requirements of NHS App integration.
 

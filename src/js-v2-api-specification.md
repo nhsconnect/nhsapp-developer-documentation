@@ -156,6 +156,7 @@ Redirects the user to a page in the NHS App specified by the appPage string enum
 | MESSAGES       | Messages Hub Page                                                               |
 | UPLIFT         | P9 Uplift Page                                                                  |
 | GO_BACK        | Go back to last page the user visited in the NHS App before the web integration |
+| ACCOUNT        | Account Hub Page                                                                |
 
 
 ##### Example Usage

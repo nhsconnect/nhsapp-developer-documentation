@@ -5,7 +5,9 @@ title: Javascript API v2 Specification
 
 Any application embedded within the NHS App as part of a web integration has access to a limited number of methods to interact with the native Android or iOS Applications using an exposed Javascript interface.
 
-The NHS App JS API must be loaded inline rather than being bundled into the client application codebase. This is so that any changes to the implementation of the API do not require client applications to be recompiled and redeployed.
+The NHS App JS API should be loaded inline rather than being bundled into the client application codebase. This is so that any changes to the implementation of the API do not require client applications to be recompiled and redeployed.
+
+This specification replaces the version 1 specification, which is deprecated. Documentation for v1 remains [available for reference here](/js-api-specification).
 
 To include the Javascript interface:
 
@@ -21,7 +23,27 @@ Example Usage:
 nhsapp.navigation.goToHomePage()
 ```
 
+## Using newer functionality
+
+The Javascript file may be cached by our client for up to 1 year. If you are updating your code to use newer functionality [(changelog)](/js-v2-api-specification/#changelog) from this library, you should append a query string to the end of the URL to invalidate any existing cache. For example, you could append the date like `?v=2025-07-20` when you start using new functionality.
+
+---
+
+## Changelog <a name="changelog"></a>
+
+### 29 July 2025
+
+* Added `ACCOUNT` appPage option to `goToPage` method.
+
+### 31 January 2025
+
+* Added `GO_BACK` appPage option to `goToPage` method. This allows navigation back to the last page the user visited in the NHS App before the web integration.
+
+---
+
 ## Reference
+
+* [Changelog](/js-v2-api-specification/#changelog)
 * [Tools](/js-v2-api-specification/#tools)
   * [getAppPlatform](/js-v2-api-specification/#getAppPlatform)
   * [isOpenInNHSApp](/js-v2-api-specification/#isOpenInNHSApp)
@@ -35,6 +57,8 @@ nhsapp.navigation.goToHomePage()
 * [Storage](/js-v2-api-specification/#storage)
   * [addToCalendar](/js-v2-api-specification/#addToCalendar)
   * [downloadFromBytes](/js-v2-api-specification/#downloadFromBytes)
+
+---
 
 ### Tools <a name="tools"></a>
 
@@ -307,5 +331,3 @@ nhsapp.storage.downloadFromBytes(
 ##### Status
 
 Live
-
----

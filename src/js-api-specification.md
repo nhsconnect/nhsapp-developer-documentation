@@ -1,11 +1,21 @@
 ---
 layout: base.njk
-title: Javascript API Specification
+title: Javascript API v1 Specification
 ---
 
 Any application embedded within the NHS App as part of a web integration has access to a limited number of methods to interact with the native Android or iOS Applications using an exposed Javascript interface.
 
 The NHS App JS API must be loaded inline rather than being bundled into the client application codebase. This is so that any changes to the implementation of the API do not require client applications to be recompiled and redeployed.
+
+<div class="nhsuk-warning-callout">
+  <h3 class="nhsuk-warning-callout__label">
+    <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      Deprecated
+    </span>
+  </h3>
+  <p>This version of the NHS App Javascript API has been deprecated and should not be used for new integrations. Please <a href="/js-v2-api-specification">use version 2</a> for all new integrations and features.</p>
+</div>
 
 To include the Javascript interface:
 

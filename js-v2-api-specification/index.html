@@ -91,15 +91,6 @@
         </a>
       </li>
       <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
-        <a class="nhsuk-header__navigation-link" href="/nhsapp-developer-documentation/js-api-specification/">
-          Javascript API Specification
-          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
-            </path>
-          </svg>
-        </a>
-      </li>
-      <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
         <a class="nhsuk-header__navigation-link" href="/nhsapp-developer-documentation/js-v2-api-specification/">
           Javascript API v2 Specification
           <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -158,9 +149,6 @@
                     <a class="app-side-nav__link" href="/nhsapp-developer-documentation/web-integration-step-by-step/">Web Integration Steps</a>
                   </li>
                   <li class="app-side-nav__item">
-                    <a class="app-side-nav__link" href="/nhsapp-developer-documentation/js-api-specification/">Javascript API Specification</a>
-                  </li>
-                  <li class="app-side-nav__item">
                     <a class="app-side-nav__link" href="/nhsapp-developer-documentation/js-v2-api-specification/">Javascript API v2 Specification</a>
                   </li>
                 </ul>
@@ -183,14 +171,29 @@
             </h1>
 
             <p>Any application embedded within the NHS App as part of a web integration has access to a limited number of methods to interact with the native Android or iOS Applications using an exposed Javascript interface.</p>
-<p>The NHS App JS API must be loaded inline rather than being bundled into the client application codebase. This is so that any changes to the implementation of the API do not require client applications to be recompiled and redeployed.</p>
+<p>The NHS App JS API should be loaded inline rather than being bundled into the client application codebase. This is so that any changes to the implementation of the API do not require client applications to be recompiled and redeployed.</p>
+<p>This specification replaces the version 1 specification, which is deprecated. Documentation for v1 remains <a href="/nhsapp-developer-documentation/js-api-specification">available for reference here</a>.</p>
 <p>To include the Javascript interface:</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"&lt;env-url>/js/v2/nhsapp.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
 <p>Where <code>env-url</code> will be determined by the environment being used. Unless testing un-released functionality, the NHS App production environment can be used <code>https://www.nhsapp.service.nhs.uk/</code>.</p>
 <p>Example Usage:</p>
 <pre class="language-javascript"><code class="language-javascript">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">goToHomePage</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h2>Using newer functionality</h2>
+<p>The Javascript file may be cached by our client for up to 1 year. If you are updating your code to use newer functionality <a href="/nhsapp-developer-documentation/js-v2-api-specification/#changelog">(changelog)</a> from this library, you should append a query string to the end of the URL to invalidate any existing cache. For example, you could append the date like <code>?v=2025-07-20</code> when you start using new functionality.</p>
+<hr>
+<h2>Changelog <a name="changelog"></a></h2>
+<h3>29 July 2025</h3>
+<ul>
+<li>Added <code>ACCOUNT</code> appPage option to <code>goToPage</code> method.</li>
+</ul>
+<h3>31 January 2025</h3>
+<ul>
+<li>Added <code>GO_BACK</code> appPage option to <code>goToPage</code> method. This allows navigation back to the last page the user visited in the NHS App before the web integration.</li>
+</ul>
+<hr>
 <h2>Reference</h2>
 <ul>
+<li><a href="/nhsapp-developer-documentation/js-v2-api-specification/#changelog">Changelog</a></li>
 <li><a href="/nhsapp-developer-documentation/js-v2-api-specification/#tools">Tools</a>
 <ul>
 <li><a href="/nhsapp-developer-documentation/js-v2-api-specification/#getAppPlatform">getAppPlatform</a></li>
@@ -214,6 +217,7 @@
 </ul>
 </li>
 </ul>
+<hr>
 <h3>Tools <a name="tools"></a></h3>
 <h4>getAppPlatform Function <a name="getAppPlatform"></a></h4>
 <p><code>nhsapp.tools.getAppPlatform()</code></p>
@@ -460,7 +464,6 @@
 <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> byteString <span class="token operator">=</span> <span class="token string">'....'</span><span class="token punctuation">;</span><br>nhsapp<span class="token punctuation">.</span>storage<span class="token punctuation">.</span><span class="token function">downloadFromBytes</span><span class="token punctuation">(</span><br>  byteString<span class="token punctuation">,</span><br>  <span class="token string">'results.pdf'</span><span class="token punctuation">,</span><br>  <span class="token string">'application/pdf'</span><br><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h5>Status</h5>
 <p>Live</p>
-<hr>
 
 
      <div class="app-edit-instructions">

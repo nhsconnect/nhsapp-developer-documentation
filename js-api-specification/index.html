@@ -14,7 +14,7 @@
     <link rel="mask-icon" href="/nhsapp-developer-documentation/images/favicon.svg" color="#005eb8">
     <link rel="icon" sizes="192x192" href="/nhsapp-developer-documentation/images/favicon-192x192.png">
 
-    <title>Javascript API Specification</title>
+    <title>Javascript API v1 Specification</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -91,15 +91,6 @@
         </a>
       </li>
       <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
-        <a class="nhsuk-header__navigation-link" href="/nhsapp-developer-documentation/js-api-specification/">
-          Javascript API Specification
-          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
-            </path>
-          </svg>
-        </a>
-      </li>
-      <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
         <a class="nhsuk-header__navigation-link" href="/nhsapp-developer-documentation/js-v2-api-specification/">
           Javascript API v2 Specification
           <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -158,9 +149,6 @@
                     <a class="app-side-nav__link" href="/nhsapp-developer-documentation/web-integration-step-by-step/">Web Integration Steps</a>
                   </li>
                   <li class="app-side-nav__item">
-                    <a class="app-side-nav__link" href="/nhsapp-developer-documentation/js-api-specification/">Javascript API Specification</a>
-                  </li>
-                  <li class="app-side-nav__item">
                     <a class="app-side-nav__link" href="/nhsapp-developer-documentation/js-v2-api-specification/">Javascript API v2 Specification</a>
                   </li>
                 </ul>
@@ -179,11 +167,20 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              Javascript API Specification
+              Javascript API v1 Specification
             </h1>
 
             <p>Any application embedded within the NHS App as part of a web integration has access to a limited number of methods to interact with the native Android or iOS Applications using an exposed Javascript interface.</p>
 <p>The NHS App JS API must be loaded inline rather than being bundled into the client application codebase. This is so that any changes to the implementation of the API do not require client applications to be recompiled and redeployed.</p>
+<div class="nhsuk-warning-callout">
+  <h3 class="nhsuk-warning-callout__label">
+    <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      Deprecated
+    </span>
+  </h3>
+  <p>This version of the NHS App Javascript API has been deprecated and should not be used for new integrations. Please <a href="/nhsapp-developer-documentation/js-v2-api-specification">use version 2</a> for all new integrations and features.</p>
+</div>
 <p>To include the Javascript interface:</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"&lt;env-url>/js/v1/nhsapp.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
 <p>Where <code>env-url</code> will be determined by the environment being used. Unless testing un-released functionality, the NHS App production environment can be used <code>https://www.nhsapp.service.nhs.uk/</code>.</p>

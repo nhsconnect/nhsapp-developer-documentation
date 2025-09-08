@@ -25,11 +25,15 @@ nhsapp.navigation.goToHomePage()
 
 ## Using newer functionality
 
-The Javascript file may be cached by our client for up to 1 year. If you are updating your code to use newer functionality [(changelog)](/js-v2-api-specification/#changelog) from this library, you should append a query string to the end of the URL to invalidate any existing cache. For example, you could append the date like `?v=2025-07-20` when you start using new functionality.
+The Javascript file may be cached by our client and CDN for up to 1 year. If you are updating your code to use newer functionality [(changelog)](/js-v2-api-specification/#changelog) from this library, you should append a query string to the end of the URL to invalidate any existing cache. For example, you could append the date like `?v=2025-07-20` when you start using new functionality.
 
 ---
 
 ## Changelog <a name="changelog"></a>
+
+### 1 September 2025
+
+* Added `PATIENT_INITIATED_FOLLOW_UP_REQUESTS` and `PATIENT_INITIATED_FOLLOW_UP_START` appPage options to `goToPage` method.
 
 ### 29 July 2025
 
@@ -172,15 +176,17 @@ Redirects the user to a page in the NHS App specified by the appPage string enum
 
 ##### AppPage enumerations
 
-| Values         |                                                                                 |
-|----------------|---------------------------------------------------------------------------------|
-| HOME_PAGE      | NHS App Home Page                                                               |
-| SERVICES       | Services Hub Page                                                               |
-| YOUR_HEALTH    | Your Health Hub Page                                                            |
-| MESSAGES       | Messages Hub Page                                                               |
-| UPLIFT         | P9 Uplift Page                                                                  |
-| GO_BACK        | Go back to last page the user visited in the NHS App before the web integration |
-| ACCOUNT        | Account Hub Page                                                                |
+| Value                                | Destination                                                                     |
+|--------------------------------------|---------------------------------------------------------------------------------|
+| `HOME_PAGE`                            | NHS App Home Page                                                               |
+| `SERVICES`                             | Services Hub Page                                                               |
+| `YOUR_HEALTH`                          | Your Health Hub Page                                                            |
+| `MESSAGES`                             | Messages Hub Page                                                               |
+| `UPLIFT`                               | P9 Uplift Page                                                                  |
+| `ACCOUNT`                              | Account Hub Page                                                                |
+| `PATIENT_INITIATED_FOLLOW_UP_REQUESTS` | Patient-initiated follow-up (PIFU) requests Page                                |
+| `PATIENT_INITIATED_FOLLOW_UP_START`    | Request a patient-initiated follow-up (PIFU) Page                               |
+| `GO_BACK`                              | Go back to last page the user visited in the NHS App before the web integration |
 
 
 ##### Example Usage

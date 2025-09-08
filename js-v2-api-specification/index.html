@@ -179,9 +179,13 @@
 <p>Example Usage:</p>
 <pre class="language-javascript"><code class="language-javascript">nhsapp<span class="token punctuation">.</span>navigation<span class="token punctuation">.</span><span class="token function">goToHomePage</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <h2>Using newer functionality</h2>
-<p>The Javascript file may be cached by our client for up to 1 year. If you are updating your code to use newer functionality <a href="/nhsapp-developer-documentation/js-v2-api-specification/#changelog">(changelog)</a> from this library, you should append a query string to the end of the URL to invalidate any existing cache. For example, you could append the date like <code>?v=2025-07-20</code> when you start using new functionality.</p>
+<p>The Javascript file may be cached by our client and CDN for up to 1 year. If you are updating your code to use newer functionality <a href="/nhsapp-developer-documentation/js-v2-api-specification/#changelog">(changelog)</a> from this library, you should append a query string to the end of the URL to invalidate any existing cache. For example, you could append the date like <code>?v=2025-07-20</code> when you start using new functionality.</p>
 <hr>
 <h2>Changelog <a name="changelog"></a></h2>
+<h3>1 September 2025</h3>
+<ul>
+<li>Added <code>PATIENT_INITIATED_FOLLOW_UP_REQUESTS</code> and <code>PATIENT_INITIATED_FOLLOW_UP_START</code> appPage options to <code>goToPage</code> method.</li>
+</ul>
 <h3>29 July 2025</h3>
 <ul>
 <li>Added <code>ACCOUNT</code> appPage option to <code>goToPage</code> method.</li>
@@ -303,38 +307,46 @@
 <table>
 <thead>
 <tr>
-<th>Values</th>
-<th></th>
+<th>Value</th>
+<th>Destination</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>HOME_PAGE</td>
+<td><code>HOME_PAGE</code></td>
 <td>NHS App Home Page</td>
 </tr>
 <tr>
-<td>SERVICES</td>
+<td><code>SERVICES</code></td>
 <td>Services Hub Page</td>
 </tr>
 <tr>
-<td>YOUR_HEALTH</td>
+<td><code>YOUR_HEALTH</code></td>
 <td>Your Health Hub Page</td>
 </tr>
 <tr>
-<td>MESSAGES</td>
+<td><code>MESSAGES</code></td>
 <td>Messages Hub Page</td>
 </tr>
 <tr>
-<td>UPLIFT</td>
+<td><code>UPLIFT</code></td>
 <td>P9 Uplift Page</td>
 </tr>
 <tr>
-<td>GO_BACK</td>
-<td>Go back to last page the user visited in the NHS App before the web integration</td>
+<td><code>ACCOUNT</code></td>
+<td>Account Hub Page</td>
 </tr>
 <tr>
-<td>ACCOUNT</td>
-<td>Account Hub Page</td>
+<td><code>PATIENT_INITIATED_FOLLOW_UP_REQUESTS</code></td>
+<td>Patient-initiated follow-up (PIFU) requests Page</td>
+</tr>
+<tr>
+<td><code>PATIENT_INITIATED_FOLLOW_UP_START</code></td>
+<td>Request a patient-initiated follow-up (PIFU) Page</td>
+</tr>
+<tr>
+<td><code>GO_BACK</code></td>
+<td>Go back to last page the user visited in the NHS App before the web integration</td>
 </tr>
 </tbody>
 </table>

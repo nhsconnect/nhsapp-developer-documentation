@@ -7,7 +7,7 @@ Web integration in the NHS App is made possible by the NHS App Android and iOS n
 
 The aim of the web integration is to make the transition to and viewing off third party pages to be seamless for the user, therefore giving them an integrated experience. This allow the third party supplier to control the bulk of the user interface.
 
-Conformance requirements are detailed in [the web integration specification document](https://digital.nhs.uk/binaries/content/assets/website-assets/services/nhs-app/suppliers/nhs-app-web-integration-specification-v1.1.pdf).
+Please contact [app.integration@nhs.net](mailto:app.integration@nhs.net) for details of conformance requirements for web integrations.
 
 ## Web View Handling Overview
 

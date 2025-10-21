@@ -31,6 +31,10 @@ The Javascript file may be cached by our client and CDN for up to 1 year. If you
 
 ## Changelog <a name="changelog"></a>
 
+### 21 October 2025
+
+* Removed the `PATIENT_INITIATED_FOLLOW_UP_*` appPage options as these are no longer required. Please use `GO_BACK` instead.
+
 ### 1 September 2025
 
 * Added `PATIENT_INITIATED_FOLLOW_UP_REQUESTS` and `PATIENT_INITIATED_FOLLOW_UP_START` appPage options to `goToPage` method.
@@ -184,8 +188,6 @@ Redirects the user to a page in the NHS App specified by the appPage string enum
 | `MESSAGES`                             | Messages Hub Page                                                               |
 | `UPLIFT`                               | P9 Uplift Page                                                                  |
 | `ACCOUNT`                              | Account Hub Page                                                                |
-| `PATIENT_INITIATED_FOLLOW_UP_REQUESTS` | Patient-initiated follow-up (PIFU) requests Page                                |
-| `PATIENT_INITIATED_FOLLOW_UP_START`    | Request a patient-initiated follow-up (PIFU) Page                               |
 | `GO_BACK`                              | Go back to last page the user visited in the NHS App before the web integration |
 
 

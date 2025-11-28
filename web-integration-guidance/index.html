@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="/nhsapp-developer-documentation/css/main.css">
+      <link rel="stylesheet" href="/nhsapp-developer-documentation/css/mobile-menu.css">
+    <script src="/nhsapp-developer-documentation/js/main.min.js"></script> 
+    <link rel="shortcut icon" href="/nhsapp-developer-documentation/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/nhsapp-developer-documentation/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/nhsapp-developer-documentation/images/apple-touch-icon-180x180.png">
+    <link rel="mask-icon" href="/nhsapp-developer-documentation/images/favicon.svg" color="#005eb8">
+    <link rel="icon" sizes="192x192" href="/nhsapp-developer-documentation/images/favicon-192x192.png">
+
+    <title>Web Integration Guidance</title>
+  </head>
+  <body>
+      <header class="nhsuk-header" role="banner">
+        <div class="nhsuk-width-container nhsuk-header__container">
+          <div class="nhsuk-header__logo">
+            <a class="nhsuk-header__link nhsuk-header__link--service " href="/nhsapp-developer-documentation/" aria-label="NHS App Developer Guidance">
+              <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
+                <path class="nhsuk-logo__background" d="M0 0h40v16H0z"></path>
+                <path class="nhsuk-logo__text" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+                <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+              </svg>
+              <span class="nhsuk-header__service-name">
+              NHS App - Developer Guidance
+            </span>
+            </a>
+          </div>
+          <div class="nhsuk-header__menu">
+            <button class="nhsuk-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-label="Open menu">Menu</button>
+          </div>
+
+          <div class="nhsuk-header__content" id="content-header">
+        </div>
+      </div>
+    
+  
+  <nav class="nhsuk-header__navigation mobile-menu" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+  <div class="nhsuk-width-container">
+    <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
+      <button class="nhsuk-header__navigation-close" id="close-menu">
+        <svg class="nhsuk-icon nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z">
+          </path>
+        </svg>
+        <span class="nhsuk-u-visually-hidden">Close menu</span>
+      </button>
+    </p>
+    <ul class="nhsuk-header__navigation-list">
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          NHS App
+        </h2>
+      </li>
+      <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+        <a class="nhsuk-header__navigation-link" href="/nhsapp-developer-documentation/">
+          NHS App Developer Guidance
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          Web Integration
+        </h2>
+      </li>
+      <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+        <a class="nhsuk-header__navigation-link" href="/nhsapp-developer-documentation/web-integration-overview/">
+          Overview
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+      <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+        <a class="nhsuk-header__navigation-link" href="/nhsapp-developer-documentation/web-integration-guidance/">
+          Web Integration Guidance
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+      <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+        <a class="nhsuk-header__navigation-link" href="/nhsapp-developer-documentation/js-v2-api-specification/">
+          Javascript API v2 Specification
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          API Integration
+        </h2>
+      </li>
+      <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+        <a class="nhsuk-header__navigation-link" href="/nhsapp-developer-documentation/api-integration-overview/">
+          Overview
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</header>
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper app-main-wrapper" id="maincontent">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full app-component-reading-width">
+
+        <div class="app-pane">
+
+         <div class="app-pane__side-bar">
+
+            <nav class="app-side-nav">
+            
+                <h2 class="app-side-nav__heading">NHS App</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="/nhsapp-developer-documentation/">NHS App Developer Guidance</a>
+                  </li>
+                </ul>
+
+                <h2 class="app-side-nav__heading">Web Integration</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="/nhsapp-developer-documentation/web-integration-overview/">Overview</a>
+                  </li>
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="/nhsapp-developer-documentation/web-integration-guidance/">Web Integration Guidance</a>
+                  </li>
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="/nhsapp-developer-documentation/js-v2-api-specification/">Javascript API v2 Specification</a>
+                  </li>
+                </ul>
+
+                <h2 class="app-side-nav__heading">API Integration</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="/nhsapp-developer-documentation/api-integration-overview/">Overview</a>
+                  </li>
+                </ul>
+            </nav>
+          </div>
+
+
+          <div class="app-pane__main-content">
+
+            <h1 class="app-page-heading">
+              Web Integration Guidance
+            </h1>
+
+            <p>This page is not intended to provide a comprehensive guide for NHS App web integrations. The information on these pages is a collation of guidance we have provided to integrating third party suppliers in response to developer issues or questions raised with the NHS App team. If the information you are looking for is not here, please contact <a href="mailto:app.integration@nhs.net">app.integration@nhs.net</a>.</p>
+<h2>In this guide</h2>
+<ul>
+<li><a href="/nhsapp-developer-documentation/web-integration-guidance/#hideheaders">Hiding Headers</a></li>
+<li><a href="/nhsapp-developer-documentation/web-integration-guidance/#recognisingtraffic">Recognising Traffic</a></li>
+<li><a href="/nhsapp-developer-documentation/web-integration-guidance/#sso">Single Sign On</a></li>
+<li><a href="/nhsapp-developer-documentation/web-integration-guidance/#sitelinks">Site Links</a></li>
+<li><a href="/nhsapp-developer-documentation/web-integration-guidance/#limitations">Limitations</a></li>
+</ul>
+<h2>Hiding Headers<a name="hideheaders"></a></h2>
+<p>In order to fit in with the styling of the NHS App - suppliers are required to hide the header of their service - which will be superseded by the NHS App native header.</p>
+<p>The NHS App will identify itself by adding a custom string in the format <code>nhsapp-android/&lt;nhsapp-version&gt;</code> or <code>nhsapp-ios/&lt;nhsapp-version&gt;</code> to the end of the user agent header when making requests (where nhsapp-version is the current version of the native NHS App, e.g. 1.29.0).</p>
+<h3>Examples</h3>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>App Version</th>
+<th>Custom User Agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pixel 2</td>
+<td>1.26.2</td>
+<td>Mozilla/5.0 (Linux; Android 10; Pixel 2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.116 Mobile Safari/537.36 nhsapp-android/1.26.2</td>
+</tr>
+<tr>
+<td>Phone</td>
+<td>1.25.0</td>
+<td>Mozilla/5.0 (iPhone; CPU iPhone OS 6_1_2 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Mobile/10B146 nhsapp-ios/1.25.0</td>
+</tr>
+</tbody>
+</table>
+<p>We recommend using the <a href="/nhsapp-developer-documentation/js-api-specification/#isOpenInNHSApp"><code>isOpenInNHSApp</code> function in the NHS App JS API</a> to determine if the page is open in the NHS App which uses the user agent for detection.</p>
+<h2>Guidance for recognising traffic from NHS App<a name="recognisingtraffic"></a></h2>
+<p>Our recommended approach for identifying NHS App traffic against non-NHS App traffic is through using URL query parameters. This guidance is applicable for web journeys (where there is no custom user agent available), particularly if using the same URLs for both NHS App and non-NHS App traffic.</p>
+<p>To assist with identifying NHS App traffic, we recommended suppliers add a <code>?from=nhsApp</code> query parameter in their application. Using this query parameter within the application will allow suppliers to setup the correct styling on the application (based on this query parameter being set or not). This can also be implemented across other pages like unexpected errors, invalid sessions, etc.</p>
+<p>This is not the required solution for suppliers, this is guidance. Suppliers should determine the best solution for their product to meet the requirements of NHS App integration.</p>
+<h2>NHS login Single Sign On <a name="sso"></a></h2>
+<p>Logged in users of the application will be passed to third party services using <a href="https://nhsconnect.github.io/nhslogin/single-sign-on/">NHS login Single Sign On flow</a>.</p>
+<p>Single Sign on will be achieved by passing the NHS App JWT token via a query parameter. The NHS App will allow a supplier to provide one or more url paths to be linked to from the jump off points.</p>
+<p>Suppliers will provide the following details to the NHS App prior to an integration:</p>
+<ul>
+<li>Base Url (for each environment stage)</li>
+<li>Journey Path(s)</li>
+</ul>
+<p>The NHS App will then redirect to the supplier using the following url format</p>
+<p><code>&lt;baseurl&gt;/&lt;journey-path&gt;?assertedLoginIdentity=&lt;sso-jwt&gt;</code></p>
+<p>E.g. <code>https://supplier1.com/hospital-appointments?assertedLoginIdentity=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</code></p>
+<p>The <code>assertedLoginIdentity</code> query parameter will be added as the last parameter, so it is possible for the journey path to include query parameters.</p>
+<h3>NHS login - Authorize call</h3>
+<p>The NHS requires suppliers to pass <code>prompt=none</code> to the NHS login <code>/authorize</code> endpoint. This will ensure that the user is shown an error page if there is an SSO issue. Suppliers must be able to display a suitable error to the user if an OIDC error code is returned from NHS login. In most circumstances, this error screen should prompt the user to return back to the NHS App to re-authenticate.</p>
+<p><strong>Note:</strong> the <a href="https://nhsconnect.github.io/nhslogin/single-sign-on/">NHS login SSO documentation</a> outlines the need for the Asserted Login Identity parameter to be passed in a different format than the <code>assertedLoginIdentity</code> query parameter (Camel case) supplied by the NHS App as outlined above. NHS login require this to be converted to Snake case: <code>asserted_login_identity</code>.</p>
+<h3>NHS login - Handle &quot;I do not want to use my NHS login&quot;</h3>
+<p>NHS login require suppliers to handle the return from this page where users are asked to agree to sharing their login details with the supplier.</p>
+<p>If the user selects &quot;I do not want to use my NHS login&quot;, NHS login will return to the suppliers <code>auth-return</code> endpoint with <code>error=access_denied</code> and <code>error_description=ConsentNotGiven</code>.</p>
+<p>The supplier should handle this and present a suitable message, with a link to the NHS App home page.</p>
+<h2>Site Links <a name="sitelinks"></a></h2>
+<p>It is possible to allow users to open links that suppliers send out (e.g. via email or sms) within the NHS App. This requires changes on both the NHS App and the supplier's application. Suppliers should work with the NHS App onboarding team to co-ordinate the changes.</p>
+<h3>Android</h3>
+<p>Site links are achieved on Android using <a href="https://developer.android.com/training/app-links/verify-site-associations">Android App Links</a>. This will require the supplier to host a <em>Asset Links</em> file on <code>https://&lt;domain-name&gt;/.well-known/assetlinks.json</code> with the contents:</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">[</span><br>    <span class="token punctuation">{</span><br>        <span class="token property">"relation"</span><span class="token operator">:</span> <span class="token punctuation">[</span><br>            <span class="token string">"delegate_permission/common.handle_all_urls"</span><br>        <span class="token punctuation">]</span><span class="token punctuation">,</span><br>        <span class="token property">"target"</span><span class="token operator">:</span> <span class="token punctuation">{</span><br>            <span class="token property">"namespace"</span><span class="token operator">:</span> <span class="token string">"android_app"</span><span class="token punctuation">,</span><br>            <span class="token property">"package_name"</span><span class="token operator">:</span> &lt;package-name><span class="token punctuation">,</span><br>            <span class="token property">"sha256_cert_fingerprints"</span><span class="token operator">:</span> <span class="token punctuation">[</span><br>                &lt;cert-fingerprint><br>            <span class="token punctuation">]</span><br>        <span class="token punctuation">}</span><br>    <span class="token punctuation">}</span><br><span class="token punctuation">]</span></code></pre>
+<p>where <code>package-name</code> and <code>cert-fingerprint</code> vary per NHS App environment. These values will be provided by the NHS App team during integration.</p>
+<h3>iOS</h3>
+<p>Site links are achieved on iOS using <a href="https://developer.apple.com/documentation/safariservices/supporting_associated_domains">Associated Domains</a>. This will require the supplier to host a <em>Site Association</em> file on <code>https://&lt;domain-name&gt;/.well-known/apple-app-site-association</code> with the contents:</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span><br>  <span class="token property">"applinks"</span><span class="token operator">:</span> <span class="token punctuation">{</span><br>    <span class="token property">"apps"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><br>    <span class="token property">"details"</span><span class="token operator">:</span> <span class="token punctuation">[</span><br>      <span class="token punctuation">{</span><br>        <span class="token property">"appID"</span><span class="token operator">:</span> <span class="token string">"&lt;app-id>"</span><span class="token punctuation">,</span><br>        <span class="token property">"paths"</span><span class="token operator">:</span> <span class="token punctuation">[</span> &lt;paths><span class="token punctuation">]</span><br>      <span class="token punctuation">}</span><br>    <span class="token punctuation">]</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
+<p>where app-id will vary per NHS App environment and will be provided by the NHS App team during integration. Paths will contain a list of url paths that the supplier would like to open on the NHS App.</p>
+<h2>Limitations <a name="limitations"></a></h2>
+<p>Although, the NHS App iOS and Android apps act largely as web browsers - there are some web functions that are not available. In some cases these will be addressed by the <a href="/nhsapp-developer-documentation/js-api-specification">NHS App JS API</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Notes/Workarounds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File Download</td>
+<td>Conventional file download does not work in web integrations due to webview limitations. However, there is a function in the NHS App JS Api to allow users to <a href="/nhsapp-developer-documentation/js-api-specification/#downloadFromBytes">download a file from bytes</a>.</td>
+</tr>
+<tr>
+<td>Browser Print</td>
+<td>There is no plan to implement this in the NHS App as this functionality could confuse users as they are viewing the page in a native app.</td>
+</tr>
+</tbody>
+</table>
+
+
+     <div class="app-edit-instructions">
+              <hr>
+              <p>Edit <a href="https://github.com/nhsconnect/nhsapp-developer-documentation/blob/develop/./src/web-integration-guidance.md">this page</a> on GitHub
+              </p>
+      </div>
+
+            <div class="app-index-navigation app-u-hide-desktop">
+              <nav class="app-side-nav">
+                
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">
+      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list">
+       <li class="nhsuk-footer__list-item">
+          <a class="" "nhsuk-footer__list-item-link"="" href="mailto:app.onboarding@nhs.net">app.onboarding@nhs.net</a>
+        </li>
+      </ul>
+      <p class="nhsuk-footer__copyright">© Crown copyright</p>
+    </div>
+  </div>
+  <div class="app-ogl-footer">
+    <div class="nhsuk-width-container"></div>
+  </div>
+</footer>
+<script src="/nhsapp-developer-documentation/js/mobile-menu.js"></script> 
+</body>
+</html>

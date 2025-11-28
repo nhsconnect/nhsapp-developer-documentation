@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: NHS App Developer Documentation
+title: NHS App Developer Guidance
 ---
 
 The NHS App provides a simple and secure way for people to access a range of NHS services on their smartphone or tablet.

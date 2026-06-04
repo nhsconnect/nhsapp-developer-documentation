@@ -31,6 +31,10 @@ The Javascript file may be cached by our client and CDN for up to 1 year. If you
 
 ## Changelog <a name="changelog"></a>
 
+### 21 May 2026
+
+* Added a new logout function under tools, [`nhsapp.tools.logout()`](/js-v2-api-specification/#logout).
+
 ### 21 October 2025
 
 * Removed the `PATIENT_INITIATED_FOLLOW_UP_*` appPage options as these are no longer required. Please use `GO_BACK` instead.
@@ -55,6 +59,7 @@ The Javascript file may be cached by our client and CDN for up to 1 year. If you
 * [Tools](/js-v2-api-specification/#tools)
   * [getAppPlatform](/js-v2-api-specification/#getAppPlatform)
   * [isOpenInNHSApp](/js-v2-api-specification/#isOpenInNHSApp)
+  * [logout](/js-v2-api-specification/#logout)
 * [Navigation](/js-v2-api-specification/#navigation)
   * [setBackAction](/js-v2-api-specification/#setBackAction)
   * [clearBackAction](/js-v2-api-specification/#clearBackAction)
@@ -97,6 +102,20 @@ Live
 ##### Description
 
 Returns true if the current page is open within the NHS App. Check is based on the current User Agent.
+
+##### Status
+
+Live
+
+---
+
+#### logout Function <a name="logout"></a>
+
+`nhsapp.tools.logout()`
+
+##### Description
+
+Immediately logs the user out of the NHS App. Use this after session expiry, or when a user explicitly chooses to log out from your journey.
 
 ##### Status
 

@@ -31,6 +31,11 @@ The Javascript file may be cached by our client and CDN for up to 1 year. If you
 
 ## Changelog <a name="changelog"></a>
 
+### 6 August 2026
+
+* Removed `SERVICES` and `YOUR_HEALTH` appPage options as these hub pages are no longer available. 
+* Renamed `ACCOUNT` appPage option to `PROFILE` to better reflect its purpose.
+
 ### 21 May 2026
 
 * Added a new logout function under tools, [`nhsapp.tools.logout()`](/js-v2-api-specification/#logout).
@@ -202,11 +207,9 @@ Redirects the user to a page in the NHS App specified by the appPage string enum
 | Value                                | Destination                                                                     |
 |--------------------------------------|---------------------------------------------------------------------------------|
 | `HOME_PAGE`                            | NHS App Home Page                                                               |
-| `SERVICES`                             | Services Hub Page                                                               |
-| `YOUR_HEALTH`                          | Your Health Hub Page                                                            |
 | `MESSAGES`                             | Messages Hub Page                                                               |
 | `UPLIFT`                               | P9 Uplift Page                                                                  |
-| `ACCOUNT`                              | Account Hub Page                                                                |
+| `PROFILE`                              | Profile Hub Page                                                                |
 | `GO_BACK`                              | Go back to last page the user visited in the NHS App before the web integration |
 
 

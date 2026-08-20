@@ -182,6 +182,11 @@
 <p>The Javascript file may be cached by our client and CDN for up to 1 year. If you are updating your code to use newer functionality <a href="/nhsapp-developer-documentation/js-v2-api-specification/#changelog">(changelog)</a> from this library, you should append a query string to the end of the URL to invalidate any existing cache. For example, you could append the date like <code>?v=2025-07-20</code> when you start using new functionality.</p>
 <hr>
 <h2>Changelog <a name="changelog"></a></h2>
+<h3>6 August 2026</h3>
+<ul>
+<li>Removed <code>SERVICES</code> and <code>YOUR_HEALTH</code> appPage options as these hub pages are no longer available.</li>
+<li>Renamed <code>ACCOUNT</code> appPage option to <code>PROFILE</code> to better reflect its purpose.</li>
+</ul>
 <h3>21 May 2026</h3>
 <ul>
 <li>Added a new logout function under tools, <a href="/nhsapp-developer-documentation/js-v2-api-specification/#logout"><code>nhsapp.tools.logout()</code></a>.</li>
@@ -333,14 +338,6 @@
 <td>NHS App Home Page</td>
 </tr>
 <tr>
-<td><code>SERVICES</code></td>
-<td>Services Hub Page</td>
-</tr>
-<tr>
-<td><code>YOUR_HEALTH</code></td>
-<td>Your Health Hub Page</td>
-</tr>
-<tr>
 <td><code>MESSAGES</code></td>
 <td>Messages Hub Page</td>
 </tr>
@@ -349,8 +346,8 @@
 <td>P9 Uplift Page</td>
 </tr>
 <tr>
-<td><code>ACCOUNT</code></td>
-<td>Account Hub Page</td>
+<td><code>PROFILE</code></td>
+<td>Profile Hub Page</td>
 </tr>
 <tr>
 <td><code>GO_BACK</code></td>
